@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head>
+    
+        <script>
+            if (location.host != new URL("http:\/\/blog.zimbra.md").host) location.href = "http:\/\/blog.zimbra.md"
+        </script>
+    
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/logo.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Early adopter experience with the new Radeon RX 5700XT on Arch Linux  &ndash;
+        
+        SoBo&#39;s Dev Log
+    </title>
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://blog.zimbra.md/css/styles.6f84514ad632600fba315252a38e35f30218f3d5ec268c1236f62782176917002e704c2b142a2d949bd831c6feabc3d6db35a3c6d6e151b839b9fe80cc19fa4f.css integrity="sha512-b4RRStYyYA&#43;6MVJSo4418wIY89XsJowSNvYnghdpFwAucEwrFCotlJvYMcb&#43;q8PW2zWjxtbhUbg5uf6AzBn6Tw==" />
+<meta name="author" content="JekA SoBo" />
+
+    
+        <meta name="keywords" content='amdgpu, arch, gpu, linux, mesa, radeon, vulkan' />
+    
+    
+        <meta name="description" content="self a shiny new AMD Radeon RX 5700 XT GPU (that&amp;rsquo;s a mouthful).
+Let&amp;rsquo;s see how it does on Linux.
+Installation First, I use Arch (btw) and that makes things a lot easier, at least for now." />
+    
+
+<meta property="og:site_name"
+    content='SoBo&#39;s Dev Log' />
+
+    <meta property="og:title" content="Early adopter experience with the new Radeon RX 5700XT on Arch Linux" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="JekA SoBo" />
+    <meta
+        property="article:published_time"
+        content='2019-08-31T09:04:26Z&#43;0000' />
+    
+        
+            <meta property="article:tag" content="amdgpu" />
+        
+            <meta property="article:tag" content="arch" />
+        
+            <meta property="article:tag" content="gpu" />
+        
+            <meta property="article:tag" content="linux" />
+        
+            <meta property="article:tag" content="mesa" />
+        
+            <meta property="article:tag" content="radeon" />
+        
+            <meta property="article:tag" content="vulkan" />
+        
+    
+    <meta property="og:url" content="http://blog.zimbra.md/posts/early-adopter-experience-with-the-new-radeon-rx-5700-xt-on-arch-linux/" />
+    
+    
+        
+            
+        
+    
+    <meta property="og:image"
+        content="http://blog.zimbra.md/images/post_pics/Early-adopter-experience-with-the-new-Radeon-RX-5700-XT-on-Arch-Linux/navi.avif" />
+    
+        <meta property="og:description" content="So I recently got myself a shiny new AMD Radeon RX 5700 XT GPU (that&amp;rsquo;s a mouthful).
+Let&amp;rsquo;s see how it does on Linux.
+Installation First, I use Arch (" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='blog.zimbra.md'
+/>
+<meta property="twitter:url" content="http://blog.zimbra.md/posts/early-adopter-experience-with-the-new-radeon-rx-5700-xt-on-arch-linux/" />
+
+
+    <meta name="twitter:title" content="Early adopter experience with the new Radeon RX 5700XT on Arch Linux" />
+    
+    
+    
+        
+            
+        
+    
+    <meta name="twitter:image"
+        content="http://blog.zimbra.md/images/post_pics/Early-adopter-experience-with-the-new-Radeon-RX-5700-XT-on-Arch-Linux/navi.avif" />
+    
+        <meta name="twitter:description" content="So I recently got myself a shiny new AMD Radeon RX 5700 XT GPU (that&amp;rsquo;s a mouthful).
+Let&amp;rsquo;s see how it does on Linux.
+Installation First, I use Arch (" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">SoBo&#39;s Dev Log</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://blog.zimbra.md/pages/about/">
+                About
+            </a></li>
+        
+        
+            <li><a href="/archguide">Arch guide</a></li>
+        
+        
+            <li><a href="/tags">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <a class="nerdlink" onclick="newSearch();">&#xf002;</a>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.com/gabmus">
+    
+    
+        &#xf296;
+    
+    <span>
+        GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.gnome.org/gabmus">
+    
+    
+        &#xf7ab;
+    
+    <span>
+        GNOME GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://youtube.com/TechPillsNet">
+    
+    
+        &#xf16a;
+    
+    <span>
+        YouTube
+    </span>
+</a>
+<a
+    
+        rel="me"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://fosstodon.org/@gabmus">
+    
+    
+        <svg class='pseudofont' xmlns:svg='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16'><path d='M 7.4779094,-1.598624e-6 C 5.5602384,0.0156984 3.7155894,0.2233384 2.6405814,0.7170384 c 0,0 -2.13206093,0.9537 -2.13206093,4.20766 0,0.74512 -0.01448,1.63603 0.0091,2.58084 0.07742,3.1821946 0.58336693,6.3183886 3.52553593,7.0971276 1.356568,0.359063 2.521335,0.434289 3.45936,0.382729 1.701085,-0.09431 2.6560206,-0.607063 2.6560206,-0.607063 l -0.05611,-1.234252 c 0,0 -1.2156316,0.383272 -2.5808476,0.33656 -1.352609,-0.04639 -2.780561,-0.145832 -2.999328,-1.80651 -0.0202,-0.145872 -0.03031,-0.301902 -0.03031,-0.465714 0,-10e-7 1.327834,0.324572 3.010574,0.40167 1.028943,0.0472 1.993827,-0.06028 2.9738766,-0.177218 1.879445,-0.224425 3.515901,-1.382448 3.721577,-2.4405646 0.32407,-1.666815 0.297376,-4.067605 0.297376,-4.067605 0,-3.25396 -2.131943,-4.20766 -2.131943,-4.20766 C 11.288476,0.2233384 9.4426784,0.0156784 7.5250084,-1.598624e-6 Z M 5.3076104,2.5424984 c 0.798781,0 1.403595,0.30701 1.803551,0.92113 l 0.388886,0.65181 0.388884,-0.65181 c 0.399875,-0.61412 1.00469,-0.92113 1.803551,-0.92113 0.6903266,0 1.2465526,0.24267 1.6713186,0.71609 0.411755,0.47342 0.61677,1.11337 0.61677,1.91862 v 3.939988 h -1.560986 v -3.824218 c 0,-0.80613 -0.339166,-1.21531 -1.0176126,-1.21531 -0.750129,0 -1.126049,0.48533 -1.126049,1.44509 v 2.09324 h -1.551753 v -2.09324 c 0,-0.95976 -0.376039,-1.44509 -1.126168,-1.44509 -0.678446,0 -1.017613,0.40918 -1.017613,1.21531 v 3.824218 h -1.560985 v -3.939988 c 0,-0.80525 0.205053,-1.4452 0.616889,-1.91862 0.424685,-0.47342 0.980911,-0.71609 1.671317,-0.71609 z' /></svg>
+    
+    <span>
+        Mastodon
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Early adopter experience with the new Radeon RX 5700XT on Arch Linux</h1>
+    
+    
+        <p class="date">
+            <span title='Date'> </span>
+    2019-08-31
+
+</p>
+    
+    
+    
+        <figure style="margin: 0">
+            
+                <img src="/images/post_pics/Early-adopter-experience-with-the-new-Radeon-RX-5700-XT-on-Arch-Linux/navi.avif" alt="" />
+            
+            
+        </figure>
+    
+    
+    <div><p>So I recently got myself a shiny new AMD Radeon RX 5700 XT GPU (that&rsquo;s a mouthful).</p>
+<p>Let&rsquo;s see how it does on Linux.</p>
+<h2 id="installation">Installation</h2>
+<p>First, I use Arch (btw) and that makes things a lot easier, at least for now. As of writing this, Navi support is still not in the mainline kernel, but it should come with Linux 5.3.</p>
+<p>Because of the AUR and many other fun things, this isn&rsquo;t much of a problem in Arch.</p>
+<p>Don&rsquo;t be surprised when you install the GPU in your PC and don&rsquo;t see Xorg or anything resembling a GUI popping up.</p>
+<p>First, you need to add a new repo to your system. Put the following in <code>/etc/pacman.conf</code>, just above the <code>[core]</code> repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>[mesa-git]
+</span></span><span style="display:flex;"><span>Server = https://pkgbuild.com/~lcarlier/$repo/$arch
+</span></span><span style="display:flex;"><span>SigLevel = Optional
+</span></span></code></pre></div><p>Now, let&rsquo;s install some packages:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -Sy amdvlk clang-git libclc-git libdrm-git llvm-git llvm-libs-git mesa-git opencl-mesa-git vulkan-mesa-layer-git vulkan-radeon-git xf86-video-amdgpu-git lib32-mesa-git lib32-mesa-git lib32-vulkan-radeon-git lib32-vulkan-mesa-layer-git
+</span></span></code></pre></div><p>This will cover most of the stuff needed to make the GPU work correctly.</p>
+<p>Now we need the new kernel modules. For this, you have two routes: install <code>amdgpu-dkms</code> from the AUR, <strong>or</strong> install <code>linux-git</code> from the AUR. I personally suggest you to go with <code>linux-git</code> as the dkms driver is not official as far as I know and doesn&rsquo;t cover all the stuff that&rsquo;s needed to make the GPU work 100% (like sensors support).</p>
+<p>Whatever route you choose, there&rsquo;s still one more thing you need to install from the AUR: the <code>linux-firmware-agd5f-radeon-navi10</code> package. This is a package I made myself containing <a href="https://people.freedesktop.org/~agd5f/radeon_ucode/navi10/">the latest firmware for Navi 10 GPUs right from the driver developer</a>.</p>
+<p>So, to summarize, here&rsquo;s a copy-paste command you can run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yay -S linux-git linux-firmware-agd5f-radeon-navi10
+</span></span></code></pre></div><p>Quick note, I tried installing <code>mesa-aco-git</code>, even just to give it a try, but unfortunately I wasn&rsquo;t able to get Xorg (or Wayland for that matter) running with it. Maybe in the future, we&rsquo;ll see.</p>
+<h2 id="gaming-performance">Gaming performance</h2>
+<p>First, all of the games I&rsquo;m gonna talk about were ran at 1440p. They were all tested in GNOME Wayland, and the ones showing problems were also tested in GNOME Xorg and XFCE.</p>
+<p>So, performance is of course great, especially in native games. Here&rsquo;s a list of games I maxed out without any hiccup or visible problem:</p>
+<ul>
+<li><strong>Rocket League</strong></li>
+<li><strong>Dark Souls 3</strong></li>
+<li><strong>Road Redemption</strong></li>
+<li><strong>CS:GO</strong></li>
+<li><strong>DOOM 2016</strong></li>
+<li><strong>The Witcher 3</strong></li>
+<li><strong>Fallout 4</strong> (except for a mouse problem unrelated to the GPU)</li>
+<li><strong>Tabletop Simulator</strong></li>
+<li><strong>For The King</strong></li>
+<li><strong>Keep Talking and Nobody Explodes</strong></li>
+<li><strong>Xonotic</strong></li>
+</ul>
+<p>Small note on The Witcher 3: it runs pretty much flawlessly, but I experienced some occasional frame rate drops, especially early on when I loaded the game. This usually goes away after 10 minutes or so of gameplay.</p>
+<p>I had various problems with other games, and pretty weird ones, too. I think they&rsquo;re worth documenting.</p>
+<h3 id="important-update">IMPORTANT UPDATE</h3>
+<p>The games that are crossed out below don&rsquo;t actually have anything wrong with them. I am just dumb enough to have used the <strong>non git versions of the mesa 32 bit libraries</strong>. I updated the install command above, just to make sure nobody gets the same problems.</p>
+<ul>
+<li><del><strong>Distance</strong>: the game launches, but performance is terrible (2 fps in the menu at 1440p). Obviously there&rsquo;s something wrong, as the game is far from being <em>that</em> heavy.</del></li>
+<li><del><strong>Screencheat</strong>: about 7 fps in game, 12 or so in the menu. Very similar to the problem with Distance.</del></li>
+<li><del><strong>Hover: Revolt of Gamers</strong>: As above, performance is unexplainably terrible even in the main menu.</del></li>
+<li><strong>Rise of the Tomb Raider</strong>: game seems to work fine, launches and the menu is perfectly responsive, but 5 seconds or so after I get in game, the whole game freezes into an unrecoverable state.</li>
+<li><strong>Quake Champions</strong>: Similar to Rise of the Tomb Raider, menu works perfectly, almost instant freeze as soon as I get in game. But Quake Champions is far from being a technically well engineered game.</li>
+<li><strong>Enter the Gungeon</strong>: Perfectly playable, but some of the graphics show some small amount of glitches.</li>
+<li><strong>No Man&rsquo;s Sky</strong>: Games works almost perfectly, but the framerate drops heavily inside menus.</li>
+</ul>
+<p><del>An interesting fact: in the games I&rsquo;ve tested, where the framerate is unexplainably low, <code>sensors</code> shows the power draw of the GPU to be stuck at 30W (same as idle). Other games that give no problems like The Witcher 3 manage to raise the power draw between 150W and 300W. I later confirmed that (of course) the clock speeds (monitored via <code>sudo watch cat /sys/kernel/debug/dri/0/amdgpu_pm_info</code>) are directly proportional to the power draw.</del></p>
+<p><del>This probably shows something&rsquo;s wrong with the driver. It made me wonder if I could force a clock speed on the GPU manually to see if those games work fine. I didn&rsquo;t want to go that route since it would kinda count as an overclock and I&rsquo;m still not confident enough in my abilities or in the driver&rsquo;s.</del></p>
+<p>What I did try to do was force the higher pstates (power states) on the GPU to see if that would work. Of course, it doesn&rsquo;t. Following the <a href="https://wiki.archlinux.org/index.php/AMDGPU#Overclocking">AMDGPU page on the Arch Wiki</a> I tried these commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -i <span style="color:#6272a4"># better be root for this</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;manual&#34;</span> &gt; /sys/class/drm/card0/device/power_dpm_force_performance_level
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;2&#34;</span> &gt; /sys/class/drm/card0/device/pp_dpm_mclk <span style="color:#6272a4"># set highest pstate 2 on the memory</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;5 6 7&#34;</span> &gt; /sys/class/drm/card0/device/pp_dpm_sclk <span style="color:#6272a4"># set higher pstates 5, 6 and 7 on the actual gpu</span>
+</span></span></code></pre></div><p>This didn&rsquo;t work at all, and showed some rather interesting errors in dmesg, similar to this one: <code>Failed to send message 0x20, response 0xfffffffb param 0x5</code>. Of course searching for these messages gave me zero results.</p>
+<p><strong>About OpenCL</strong>: Unsurprisingly Clover doesn&rsquo;t work, <del>but so doesn&rsquo;t the AMDGPU-PRO OpenCL implementation. Still need to investigate that further, I didn&rsquo;t get into much detail with OpenCL. Will do soon after I have these more serious problems sorted out.</del> OpenCL now works using the <code>opencl-amdgpu-pro-pal</code> package from AUR.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>It&rsquo;s not an entirely bad thing to be an early adopter. I mean, I am starting to understand how the driver works (kinda?) and digging into lower level stuff with the kernel and the GPU than I&rsquo;ve ever had.</p>
+<p>This said, there&rsquo;s still much I don&rsquo;t understand. I am willing to learn and help. If you have more experience with this stuff and want to add your voice to the conversation, don&rsquo;t hesitate to comment or contact me personally.</p>
+<p>Will keep this blog updated with any news regarding making this GPU work.</p>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/amdgpu">#amdgpu</a>
+        
+            <a
+                
+                href="/tags/arch">#arch</a>
+        
+            <a
+                
+                href="/tags/gpu">#gpu</a>
+        
+            <a
+                
+                href="/tags/linux">#linux</a>
+        
+            <a
+                
+                href="/tags/mesa">#mesa</a>
+        
+            <a
+                
+                href="/tags/radeon">#radeon</a>
+        
+            <a
+                
+                href="/tags/vulkan">#vulkan</a>
+        
+    </p>
+
+
+    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="openFediInstanceDialog();">
+        Share on the Fediverse
+    </a>
+    <div id="fediInstanceDialog">
+        <div class="bg" onclick="closeFediInstanceDialog();"></div>
+        <div class="dialog">
+            <h2>Enter your instance&#39;s address</h2>
+            <input id="fediInstanceInput" placeholder='Eg. mastodon.social' type="text" />
+            <div class="buttons">
+                <a class="shareBtn" onclick="closeFediInstanceDialog();">Cancel</a>
+                <a class="shareBtn" onclick="shareOnFedi();">Share</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var articleTitle = 'Early adopter experience with the new Radeon RX 5700XT on Arch Linux';
+        var articleLink = 'http:\/\/blog.zimbra.md\/posts\/early-adopter-experience-with-the-new-radeon-rx-5700-xt-on-arch-linux\/';
+        var fediInstanceDialog = document.getElementById('fediInstanceDialog');
+        var fediInstanceInput = document.getElementById('fediInstanceInput');
+        function openFediInstanceDialog() {
+            fediInstanceDialog.classList.add('open');
+        }
+        function closeFediInstanceDialog() {
+            fediInstanceDialog.classList.remove('open');
+        }
+        function fixURL(url) {
+            if (url.substr(0, 8) == 'https://') return url;
+            if (url.substr(0, 7) == 'http://') return url;
+            return 'https://' + url;
+        }
+        function shareOnFedi() {
+            let instance = fediInstanceInput.value.trim();
+            if (!instance) {
+                return;
+            }
+            instance = fixURL(instance);
+            window.open(
+                `${instance}/share?text=${articleTitle}%20${articleLink}`,
+                '__blank'
+            );
+            closeFediInstanceDialog();
+        }
+    </script>
+
+
+
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+
+<div id="ficurinia-cactus-comments"></div>
+
+<script>
+initComments({
+    node: document.getElementById("ficurinia-cactus-comments"),
+    defaultHomeserverUrl: 'https:\/\/matrix.cactus.chat:8448',
+    serverName: 'cactus.chat',
+    siteName: "fleek.eu.org",
+    commentSectionId: "5de30979545607c36dfd642579d5e655"
+})
+</script>
+
+
+    
+    
+        
+        <div class="relatedArticlesContainer">
+            <hr />
+            <h2>More posts like this</h2>
+            <div class="postlist ">
+                <article class="card postlistitem">
+    <div>
+        <h2>
+            <a href="http://blog.zimbra.md/posts/giara_is_a_reddit_app_for_linux/">Giara is a reddit app for Linux</a>
+        </h2>
+        <p class="date">
+            <span title='Date'> </span>
+    2020-10-30
+
+
+                | 
+                <span title='Tags'> </span>
+                
+                    <a href="/tags/giara">#giara</a>
+                
+                    <a href="/tags/gnome">#gnome</a>
+                
+                    <a href="/tags/gtk">#gtk</a>
+                
+                    <a href="/tags/linux">#linux</a>
+                
+                    <a href="/tags/reddit">#reddit</a>
+                
+                    <a href="/tags/world">#world</a>
+                
+            
+        </p>
+        
+            
+        
+        
+            <div class="articlePreview">
+                <p>
+                    
+                        I am a quite avid reddit user. Like it or not, reddit is a very central place where communities for stuff that I care about tend to aggregate.
+For the longest time, I have felt the need for a reddit app on my Linux desktop, and I waited and kept waiting for one that would finally allow me to break free of using the web version.
+                    
+                </p>
+                <p><a href="http://blog.zimbra.md/posts/giara_is_a_reddit_app_for_linux/">Continue reading </a></p>
+            </div>
+        
+    </div>
+    <hr />
+</article>
+
+            </div>
+        </div>
+    
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2022 &copy; JekA SoBo - <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

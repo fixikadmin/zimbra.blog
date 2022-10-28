@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head>
+    
+        <script>
+            if (location.host != new URL("http:\/\/blog.zimbra.md").host) location.href = "http:\/\/blog.zimbra.md"
+        </script>
+    
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/logo.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Gtk4, LibAdwaita and the new Feeds  &ndash;
+        
+        SoBo&#39;s Dev Log
+    </title>
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://blog.zimbra.md/css/styles.6f84514ad632600fba315252a38e35f30218f3d5ec268c1236f62782176917002e704c2b142a2d949bd831c6feabc3d6db35a3c6d6e151b839b9fe80cc19fa4f.css integrity="sha512-b4RRStYyYA&#43;6MVJSo4418wIY89XsJowSNvYnghdpFwAucEwrFCotlJvYMcb&#43;q8PW2zWjxtbhUbg5uf6AzBn6Tw==" />
+<meta name="author" content="JekA SoBo" />
+
+    
+        <meta name="keywords" content='cpp, feeds, giara, gtk, gtk4, hydrapaper, libadwaita, whatip' />
+    
+    
+        <meta name="description" content=" coming for my news reader app Feeds.
+Most of this year, as far as personal projects go, I spent at close contact with Gtk4, libadwaita and the awesome people over at the various matrix chat rooms." />
+    
+
+<meta property="og:site_name"
+    content='SoBo&#39;s Dev Log' />
+
+    <meta property="og:title" content="Gtk4, LibAdwaita and the new Feeds" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="JekA SoBo" />
+    <meta
+        property="article:published_time"
+        content='2021-11-21T11:52:10Z&#43;0100' />
+    
+        
+            <meta property="article:tag" content="cpp" />
+        
+            <meta property="article:tag" content="feeds" />
+        
+            <meta property="article:tag" content="giara" />
+        
+            <meta property="article:tag" content="gtk" />
+        
+            <meta property="article:tag" content="gtk4" />
+        
+            <meta property="article:tag" content="hydrapaper" />
+        
+            <meta property="article:tag" content="libadwaita" />
+        
+            <meta property="article:tag" content="whatip" />
+        
+    
+    <meta property="og:url" content="http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/" />
+    
+    
+        
+            
+        
+    
+    <meta property="og:image"
+        content="http://blog.zimbra.md/images/post_pics/Gtk4_LibAdwaita_and_the_new_Feeds/feeds.avif" />
+    
+        <meta property="og:description" content="So, something big is coming for my news reader app Feeds.
+Most of this year, as far as personal projects go, I spent at close contact with Gtk4, libadwaita and " />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='blog.zimbra.md'
+/>
+<meta property="twitter:url" content="http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/" />
+
+
+    <meta name="twitter:title" content="Gtk4, LibAdwaita and the new Feeds" />
+    
+    
+    
+        
+            
+        
+    
+    <meta name="twitter:image"
+        content="http://blog.zimbra.md/images/post_pics/Gtk4_LibAdwaita_and_the_new_Feeds/feeds.avif" />
+    
+        <meta name="twitter:description" content="So, something big is coming for my news reader app Feeds.
+Most of this year, as far as personal projects go, I spent at close contact with Gtk4, libadwaita and " />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">SoBo&#39;s Dev Log</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://blog.zimbra.md/pages/about/">
+                About
+            </a></li>
+        
+        
+            <li><a href="/archguide">Arch guide</a></li>
+        
+        
+            <li><a href="/tags">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <a class="nerdlink" onclick="newSearch();">&#xf002;</a>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.com/gabmus">
+    
+    
+        &#xf296;
+    
+    <span>
+        GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.gnome.org/gabmus">
+    
+    
+        &#xf7ab;
+    
+    <span>
+        GNOME GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://youtube.com/TechPillsNet">
+    
+    
+        &#xf16a;
+    
+    <span>
+        YouTube
+    </span>
+</a>
+<a
+    
+        rel="me"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://fosstodon.org/@gabmus">
+    
+    
+        <svg class='pseudofont' xmlns:svg='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16'><path d='M 7.4779094,-1.598624e-6 C 5.5602384,0.0156984 3.7155894,0.2233384 2.6405814,0.7170384 c 0,0 -2.13206093,0.9537 -2.13206093,4.20766 0,0.74512 -0.01448,1.63603 0.0091,2.58084 0.07742,3.1821946 0.58336693,6.3183886 3.52553593,7.0971276 1.356568,0.359063 2.521335,0.434289 3.45936,0.382729 1.701085,-0.09431 2.6560206,-0.607063 2.6560206,-0.607063 l -0.05611,-1.234252 c 0,0 -1.2156316,0.383272 -2.5808476,0.33656 -1.352609,-0.04639 -2.780561,-0.145832 -2.999328,-1.80651 -0.0202,-0.145872 -0.03031,-0.301902 -0.03031,-0.465714 0,-10e-7 1.327834,0.324572 3.010574,0.40167 1.028943,0.0472 1.993827,-0.06028 2.9738766,-0.177218 1.879445,-0.224425 3.515901,-1.382448 3.721577,-2.4405646 0.32407,-1.666815 0.297376,-4.067605 0.297376,-4.067605 0,-3.25396 -2.131943,-4.20766 -2.131943,-4.20766 C 11.288476,0.2233384 9.4426784,0.0156784 7.5250084,-1.598624e-6 Z M 5.3076104,2.5424984 c 0.798781,0 1.403595,0.30701 1.803551,0.92113 l 0.388886,0.65181 0.388884,-0.65181 c 0.399875,-0.61412 1.00469,-0.92113 1.803551,-0.92113 0.6903266,0 1.2465526,0.24267 1.6713186,0.71609 0.411755,0.47342 0.61677,1.11337 0.61677,1.91862 v 3.939988 h -1.560986 v -3.824218 c 0,-0.80613 -0.339166,-1.21531 -1.0176126,-1.21531 -0.750129,0 -1.126049,0.48533 -1.126049,1.44509 v 2.09324 h -1.551753 v -2.09324 c 0,-0.95976 -0.376039,-1.44509 -1.126168,-1.44509 -0.678446,0 -1.017613,0.40918 -1.017613,1.21531 v 3.824218 h -1.560985 v -3.939988 c 0,-0.80525 0.205053,-1.4452 0.616889,-1.91862 0.424685,-0.47342 0.980911,-0.71609 1.671317,-0.71609 z' /></svg>
+    
+    <span>
+        Mastodon
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Gtk4, LibAdwaita and the new Feeds</h1>
+    
+    
+        <p class="date">
+            <span title='Date'> </span>
+    2021-11-21
+
+</p>
+    
+    
+    
+        <figure style="margin: 0">
+            
+                <img src="/images/post_pics/Gtk4_LibAdwaita_and_the_new_Feeds/feeds.avif" alt="" />
+            
+            
+        </figure>
+    
+    
+    <div><p>So, something big is coming for my news reader app <a href="https://gfeeds.gabmus.org">Feeds</a>.</p>
+<p>Most of this year, as far as personal projects go, I spent at close contact with Gtk4, <a href="https://gitlab.gnome.org/gnome/libadwaita">libadwaita</a> and the awesome people over at the various matrix chat rooms.</p>
+<p>I&rsquo;ve spent this time porting <a href="https://whatip.gabmus.org">What IP</a>, <a href="https://hydrapaper.gabmus.org">HydraPaper</a> and <a href="https://giara.gabmus.org">Giara</a> to Gtk4+libadwaita.</p>
+<p><img src="/images/post_pics/Gtk4_LibAdwaita_and_the_new_Feeds/whatip_hydrapaper_giara.avif" alt="What IP, HydraPaper and Giara at their latest iteration, side by side"></p>
+<p>I&rsquo;m really happy of the results, and I&rsquo;m even happier with how this new stack is shaping up.</p>
+<p>The porting process for the most part has been relatively painless across the board, with only minor changes (albeit, many of them) needed for the actual porting. Along with the updated stack, I&rsquo;ve been able to introduce new features and improvements, for the most part thanks to the new widgets available in libadwaita making my life a lot easier.</p>
+<p>What IP being the simpler of the bunch didn&rsquo;t really change much from its original iteration, except for some code cleanups. But hey, the theme is different and it looks amazing!</p>
+<p>HydraPaper also stayed pretty much the same, with the exception of a new wallpaper folder selector (that you can see in the image above) in the form of a brand new widget, the mighty Flap! It&rsquo;s a sidebar that can open above other widgets, mostly a glorified overlay, but with extra bells and whistles. On a regular monitor you can open it with the usual button on the headerbar, the same that opened a Popover before, but on a touchscreen you can swipe to open it! Plus, compared to the previous Popover implementation, the new Flap is part of the main window, meaning it can scale to fill the entire vertical space of the window, making this selector/filter much easier to interact with thanks to the increased size.</p>
+<p>Giara being one of the more complex apps, received a lot more work and attention. First off, the post views have been re-implemented using ListView, a brand new (still somewhat janky) widget in Gtk4 that allows for better optimized lists, where rows get recycled instead of adding up, with performance quickly grinding to a halt. This change required a lot of work, since my usual terrible implementation of ListBox is 100% incompatible with the way ListView works. But with a lot of help and elbow grease, I managed to land it, making the whole experience of mindlessly scrolling through reddit a little less frustrating (hopefully). Also, thanks to another awesome widget, AdwCarousel, I was able to add support for image galleries. And they support touch gestures, too! Along with these changes, I also added an internal fullscreen image viewer, very much inspired by the one in telegram-desktop.</p>
+<hr>
+<p>But let&rsquo;s jump to the actual reason why I&rsquo;m writing this post, <em>The new Feeds</em>.</p>
+<p><img src="/images/post_pics/Gtk4_LibAdwaita_and_the_new_Feeds/feeds.avif" alt="What the new Feeds will look like"></p>
+<p>You see, I wanted to start porting Feeds to Gtk4 sooner than it ended up happening. Unfortunately, I wasn&rsquo;t able to up until recently. The reason being WebKit. WebKit support for Gtk4 has been broken for a while, and just recently (not all that recently, tho) it got to a point where it was usable enough for me to start the port. At the time of writing this, you still need to enable Gtk4 support in WebKit by using custom build flags, making development possible by building WebKit myself (which, by the way, takes <em>a lot</em> of time), but at the same time making distribution unfeasible. Flatpak being the main way I distribute my apps, it could work in theory, but having a 1GB+ bundle for a simple news reader isn&rsquo;t really a great user experience, so for now I&rsquo;m holding off this release, waiting for it to become available in the GNOME runtime.</p>
+<p>But let&rsquo;s move on to what&rsquo;s actually new in Feeds.</p>
+<p>First of all, from a user facing perspective, The whole look of the app is quite different. Apart from the new Adwaita theme in libadwaita, the article list uses the new <code>navigation-sidebar</code> style class, with cool rounded corners for the rows and no separators between them, but still providing enough visual separation. Label sizes in the rows have also been tweaked slightly.</p>
+<p>Oh, and of course, I added article pictures! The code is based on the custom picture widget I made for Giara, and let me tell you: they make any article that more interesting!</p>
+<p>As for visual changes, another big one is the new filter view, again based on the Flap widget.</p>
+<p><img src="/images/post_pics/Gtk4_LibAdwaita_and_the_new_Feeds/feeds_filters.avif" alt=""></p>
+<p>It&rsquo;s a similar story to HydraPaper, the old Popover implementation was hard to use and unintuitive. A sidebar is a much more common pattern, plus the added vertical size makes it easier to find the feed you wanna look at.</p>
+<p>As for the articles list, you may think ListView would be perfect here as well, and that&rsquo;s what I thought as well. Unfortunately due to some technical issues with how ListView row selection and activation work at this current time, while it does work, it&rsquo;s not really all that convenient. I added the ListView to Feeds, and you can enable it in the preferences, in the advanced section, but I kept the ListBox around as a default, and I also changed its API so that it&rsquo;s the same as the ListView implementation. You can switch between one or the other and try them out for yourself, hopefully at some point I can get rid of the ListBox and have the ListView be the default.</p>
+<p>With all the nice changes and cool things this port brought with it, I decided to tackle one of the most annoying issues I&rsquo;ve had with Feeds: the actual feed parsing.</p>
+<p>Up until recently I&rsquo;ve been using the very popular <a href="https://github.com/kurtmckee/feedparser/">feedparser</a> python library, but I&rsquo;ve always been dissatisfied with both its performance and its weird quirks. I came to the conclusion that it&rsquo;s not the kind of library I was looking for.</p>
+<p>I tried searching for alternatives, and I broadened my search to any language, but unfortunately I couldn&rsquo;t find something I really liked.</p>
+<p>So I decided to write my own! And for the best performance I wrote it in&hellip; C++! Maybe some of you were expecting Rust? Maybe one day, but I don&rsquo;t really know Rust right now 😕</p>
+<p>This new library is called <a href="https://gitlab.com/gabmus/syndication-domination">Sydndication Domination</a> or syndom for short (it&rsquo;s a bit cheesy, I know). Syndom is tailor made for Feeds, but of course it can be used for any application.</p>
+<p>It&rsquo;s based around an awesome XML parser for C++ called <a href="https://pugixml.org/">pugixml</a>, if you ever need to parse XML I suggest you take a look at it. Syndom is able to parse an RSS or Atom file and extract all the useful information a news reader would need, and most importantly, <em>it</em> does the heavy lifting of trying all the different places a certain information can be found in. It can also parse Opml files for importing feeds, as well as Html files for extracting other useful information from, say a blog post, like the featured image, the feed URL, the title or the description.</p>
+<p>The whole thing comes together inside Feeds with python bindings, created using another library called <a href="https://github.com/pybind/pybind11/">pybind11</a>.</p>
+<p>Honestly this has probably been the biggest change to ever come to Feeds. The performance difference is enormous, it&rsquo;s like night and day, and I couldn&rsquo;t be happier about it.</p>
+<p>So that&rsquo;s all I wanted you to know, hopefully I can release Feeds sooner rather than later as I really, <em>really</em> want people to use this new version rather than the crusty old one.</p>
+<p>If you want to try it for yourself <a href="https://cloud.disroot.org/s/2Dj94NxWn6HRAZC">you can download a recent snapshot I made manually from this link</a>. Please do let me know what you think in the comments or <a href="https://matrix.to/#/#org.gabmus:matrix.org">in the matrix room</a> if you prefer. And feel free to report any bugs you encounter along the way!</p>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/cpp">#cpp</a>
+        
+            <a
+                
+                href="/tags/feeds">#feeds</a>
+        
+            <a
+                
+                href="/tags/giara">#giara</a>
+        
+            <a
+                
+                href="/tags/gtk">#gtk</a>
+        
+            <a
+                
+                href="/tags/gtk4">#gtk4</a>
+        
+            <a
+                
+                href="/tags/hydrapaper">#hydrapaper</a>
+        
+            <a
+                
+                href="/tags/libadwaita">#libadwaita</a>
+        
+            <a
+                
+                href="/tags/whatip">#whatip</a>
+        
+    </p>
+
+
+    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="openFediInstanceDialog();">
+        Share on the Fediverse
+    </a>
+    <div id="fediInstanceDialog">
+        <div class="bg" onclick="closeFediInstanceDialog();"></div>
+        <div class="dialog">
+            <h2>Enter your instance&#39;s address</h2>
+            <input id="fediInstanceInput" placeholder='Eg. mastodon.social' type="text" />
+            <div class="buttons">
+                <a class="shareBtn" onclick="closeFediInstanceDialog();">Cancel</a>
+                <a class="shareBtn" onclick="shareOnFedi();">Share</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var articleTitle = 'Gtk4, LibAdwaita and the new Feeds';
+        var articleLink = 'http:\/\/blog.zimbra.md\/posts\/gtk4_libadwaita_and_the_new_feeds\/';
+        var fediInstanceDialog = document.getElementById('fediInstanceDialog');
+        var fediInstanceInput = document.getElementById('fediInstanceInput');
+        function openFediInstanceDialog() {
+            fediInstanceDialog.classList.add('open');
+        }
+        function closeFediInstanceDialog() {
+            fediInstanceDialog.classList.remove('open');
+        }
+        function fixURL(url) {
+            if (url.substr(0, 8) == 'https://') return url;
+            if (url.substr(0, 7) == 'http://') return url;
+            return 'https://' + url;
+        }
+        function shareOnFedi() {
+            let instance = fediInstanceInput.value.trim();
+            if (!instance) {
+                return;
+            }
+            instance = fixURL(instance);
+            window.open(
+                `${instance}/share?text=${articleTitle}%20${articleLink}`,
+                '__blank'
+            );
+            closeFediInstanceDialog();
+        }
+    </script>
+
+
+
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+
+<div id="ficurinia-cactus-comments"></div>
+
+<script>
+initComments({
+    node: document.getElementById("ficurinia-cactus-comments"),
+    defaultHomeserverUrl: 'https:\/\/matrix.cactus.chat:8448',
+    serverName: 'cactus.chat',
+    siteName: "fleek.eu.org",
+    commentSectionId: "ec586fd7942ed46eccfeb5521bf0991f"
+})
+</script>
+
+
+    
+    
+        
+        <div class="relatedArticlesContainer">
+            <hr />
+            <h2>More posts like this</h2>
+            <div class="postlist ">
+                <article class="card postlistitem">
+    <div>
+        <h2>
+            <a href="http://blog.zimbra.md/posts/swatch_a_color_palette_manager/">Swatch: a color palette manager</a>
+        </h2>
+        <p class="date">
+            <span title='Date'> </span>
+    2022-02-14
+
+
+                | 
+                <span title='Tags'> </span>
+                
+                    <a href="/tags/app">#app</a>
+                
+                    <a href="/tags/blueprint">#blueprint</a>
+                
+                    <a href="/tags/color">#color</a>
+                
+                    <a href="/tags/gtk">#gtk</a>
+                
+                    <a href="/tags/gtk4">#gtk4</a>
+                
+                    <a href="/tags/libadwaita">#libadwaita</a>
+                
+                    <a href="/tags/swatch">#swatch</a>
+                
+            
+        </p>
+        
+            
+                <a class="unstyledLink" href="http://blog.zimbra.md/posts/swatch_a_color_palette_manager/">
+                    
+                        <img src="/images/post_pics/Swatch_a_color_palette_manager/scrot0.png" alt="" />
+                    
+                </a>
+            
+        
+        
+            <div class="articlePreview">
+                <p>
+                    
+                        Between one thing and the other, I found myself in need for a palette manager: something to let me categorize different palettes and easily pick and name colors depending on their use.
+                    
+                </p>
+                <p><a href="http://blog.zimbra.md/posts/swatch_a_color_palette_manager/">Continue reading </a></p>
+            </div>
+        
+    </div>
+    <hr />
+</article>
+<article class="card postlistitem">
+    <div>
+        <h2>
+            <a href="http://blog.zimbra.md/posts/block_ads_in_webkitgtk/">Block ads in WebKitGtk</a>
+        </h2>
+        <p class="date">
+            <span title='Date'> </span>
+    2021-11-27
+
+
+                | 
+                <span title='Tags'> </span>
+                
+                    <a href="/tags/adblock">#adblock</a>
+                
+                    <a href="/tags/gtk">#gtk</a>
+                
+                    <a href="/tags/python">#python</a>
+                
+                    <a href="/tags/tutorial">#tutorial</a>
+                
+                    <a href="/tags/webkit">#webkit</a>
+                
+                    <a href="/tags/webkit2gtk">#webkit2gtk</a>
+                
+                    <a href="/tags/webkitgtk">#webkitgtk</a>
+                
+                    <a href="/tags/webview">#webview</a>
+                
+            
+        </p>
+        
+            
+                <a class="unstyledLink" href="http://blog.zimbra.md/posts/block_ads_in_webkitgtk/">
+                    
+                        <img src="/images/post_pics/Block_ads_in_WebKitGtk/block_ads_webkit.avif" alt="" />
+                    
+                </a>
+            
+        
+        
+            <div class="articlePreview">
+                <p>
+                    
+                        One of the most requested features (and for a good reason) in Feeds has always been ad blocking.
+I never came around to implement it, mostly because I couldn&rsquo;t find a guide or any similar resource, except for GNOME Web&rsquo;s source code, and that&rsquo;s not exactly easy to navigate.
+                    
+                </p>
+                <p><a href="http://blog.zimbra.md/posts/block_ads_in_webkitgtk/">Continue reading </a></p>
+            </div>
+        
+    </div>
+    <hr />
+</article>
+
+            </div>
+        </div>
+    
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2022 &copy; JekA SoBo - <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

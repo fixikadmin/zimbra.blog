@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gtk3 on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/gtk3/</link>
+    <description>Recent content in gtk3 on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Thu, 08 Oct 2020 11:39:57 +0200</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/gtk3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Map Mouse Back and Forward Buttons in Your GTK App</title>
+      <link>http://blog.zimbra.md/posts/map_mouse_back_and_forward_buttons_in_your_gtk_app/</link>
+      <pubDate>Thu, 08 Oct 2020 11:39:57 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/map_mouse_back_and_forward_buttons_in_your_gtk_app/</guid>
+      <description>The back and forward buttons on your mouse are incredibly useful, at least for me. I use them all the time!
+I couldn&amp;rsquo;t find a proper way to map it on my app until I asked on the GTK Matrix chatroom, there baedert sent me a couple of links to how he did it in his app corebird.</description>
+    </item>
+    
+    <item>
+      <title>Create an auto resizing image widget with GTK3 and Python</title>
+      <link>http://blog.zimbra.md/posts/create_an_auto-resizing_image_widget_with_gtk3_and_python/</link>
+      <pubDate>Sat, 03 Oct 2020 10:23:54 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/create_an_auto-resizing_image_widget_with_gtk3_and_python/</guid>
+      <description>One of the most common things you might wanna do with images, that is making them automatically resize to adapt to the available space they have, is not possible with Gtk.</description>
+    </item>
+    
+  </channel>
+</rss>

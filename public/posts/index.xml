@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/posts/</link>
+    <description>Recent content in Posts on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Mon, 14 Feb 2022 11:31:20 +0100</lastBuildDate><atom:link href="http://blog.zimbra.md/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swatch: a color palette manager</title>
+      <link>http://blog.zimbra.md/posts/swatch_a_color_palette_manager/</link>
+      <pubDate>Mon, 14 Feb 2022 11:31:20 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/swatch_a_color_palette_manager/</guid>
+      <description>Between one thing and the other, I found myself in need for a palette manager: something to let me categorize different palettes and easily pick and name colors depending on their use.</description>
+    </item>
+    
+    <item>
+      <title>Block ads in WebKitGtk</title>
+      <link>http://blog.zimbra.md/posts/block_ads_in_webkitgtk/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/block_ads_in_webkitgtk/</guid>
+      <description>One of the most requested features (and for a good reason) in Feeds has always been ad blocking.
+I never came around to implement it, mostly because I couldn&amp;rsquo;t find a guide or any similar resource, except for GNOME Web&amp;rsquo;s source code, and that&amp;rsquo;s not exactly easy to navigate.</description>
+    </item>
+    
+    <item>
+      <title>Gtk4, LibAdwaita and the new Feeds</title>
+      <link>http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/</link>
+      <pubDate>Sun, 21 Nov 2021 11:52:10 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/</guid>
+      <description>So, something big is coming for my news reader app Feeds.
+Most of this year, as far as personal projects go, I spent at close contact with Gtk4, libadwaita and the awesome people over at the various matrix chat rooms.</description>
+    </item>
+    
+    <item>
+      <title>Switching to Cactus Comments</title>
+      <link>http://blog.zimbra.md/posts/switching_to_cactus_comments/</link>
+      <pubDate>Wed, 16 Jun 2021 10:24:30 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/switching_to_cactus_comments/</guid>
+      <description>I&amp;rsquo;ve been using Commento for a while for comments (without much adoption to be honest), and while I really love the project, and the simplicity of its approach, there&amp;rsquo;s always been one unavoidable thing I never really liked too much: if you want to comment, you have to register to my commento instance.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi Pico pinout in your terminal</title>
+      <link>http://blog.zimbra.md/posts/raspberry_pi_pico_pinout_in_your_terminal/</link>
+      <pubDate>Tue, 09 Mar 2021 13:14:27 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/raspberry_pi_pico_pinout_in_your_terminal/</guid>
+      <description>I&amp;rsquo;m playing around with the new Raspberry Pi Pico, and I quickly realized that I&amp;rsquo;d really love to have a quick pinout reference in my terminal.
+I thought of making a man page, but I would have lost the color (I don&amp;rsquo;t know how to use arbitrary colors in groff), so I just created a simple text file with ascii escape sequences for colors and called it a day.</description>
+    </item>
+    
+    <item>
+      <title>Making a D-Bus Daemon with Python and Flatpak</title>
+      <link>http://blog.zimbra.md/posts/making-a-dbus-daemon/</link>
+      <pubDate>Sat, 02 Jan 2021 09:42:43 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/making-a-dbus-daemon/</guid>
+      <description>I learned most of this stuff from this awesome series of articles by Larry Price. Give it a read, it&amp;rsquo;s worth it.
+Why D-Bus daemons are quite useful tools. What would you need them for?</description>
+    </item>
+    
+    <item>
+      <title>Giara is a reddit app for Linux</title>
+      <link>http://blog.zimbra.md/posts/giara_is_a_reddit_app_for_linux/</link>
+      <pubDate>Fri, 30 Oct 2020 09:55:23 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/giara_is_a_reddit_app_for_linux/</guid>
+      <description>I am a quite avid reddit user. Like it or not, reddit is a very central place where communities for stuff that I care about tend to aggregate.
+For the longest time, I have felt the need for a reddit app on my Linux desktop, and I waited and kept waiting for one that would finally allow me to break free of using the web version.</description>
+    </item>
+    
+    <item>
+      <title>Map Mouse Back and Forward Buttons in Your GTK App</title>
+      <link>http://blog.zimbra.md/posts/map_mouse_back_and_forward_buttons_in_your_gtk_app/</link>
+      <pubDate>Thu, 08 Oct 2020 11:39:57 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/map_mouse_back_and_forward_buttons_in_your_gtk_app/</guid>
+      <description>The back and forward buttons on your mouse are incredibly useful, at least for me. I use them all the time!
+I couldn&amp;rsquo;t find a proper way to map it on my app until I asked on the GTK Matrix chatroom, there baedert sent me a couple of links to how he did it in his app corebird.</description>
+    </item>
+    
+    <item>
+      <title>Create an auto resizing image widget with GTK3 and Python</title>
+      <link>http://blog.zimbra.md/posts/create_an_auto-resizing_image_widget_with_gtk3_and_python/</link>
+      <pubDate>Sat, 03 Oct 2020 10:23:54 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/create_an_auto-resizing_image_widget_with_gtk3_and_python/</guid>
+      <description>One of the most common things you might wanna do with images, that is making them automatically resize to adapt to the available space they have, is not possible with Gtk.</description>
+    </item>
+    
+    <item>
+      <title>Man pages with Markdown and Pandoc</title>
+      <link>http://blog.zimbra.md/posts/man_pages_with_markdown_and_pandoc/</link>
+      <pubDate>Mon, 31 Aug 2020 19:49:06 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/man_pages_with_markdown_and_pandoc/</guid>
+      <description>Man pages are awesome. They genuinely are. In any *nix system you can just get documentation on your programs or even some programming things (namely a lot of C stuff, this was very useful in University) offline by just using a tiny simple command.</description>
+    </item>
+    
+    <item>
+      <title>Back to Hugo and on static site generators and custom themes</title>
+      <link>http://blog.zimbra.md/posts/back-to-hugo/</link>
+      <pubDate>Mon, 24 Aug 2020 09:19:02 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/back-to-hugo/</guid>
+      <description>As you can see, this website is kinda different. I remade it, just because why not.
+I was previously using Hexo with a nice theme called cactus (properly altered to match my preference), but at some point I got tired of that as well.</description>
+    </item>
+    
+    <item>
+      <title>Python unittest &#43; Meson</title>
+      <link>http://blog.zimbra.md/posts/python-unittest-meson/</link>
+      <pubDate>Mon, 11 May 2020 11:27:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/python-unittest-meson/</guid>
+      <description>Alright, I started writing some unit tests for Feeds and I wanted to integrate them into meson, so that I can just run meson test or ninja test during build and have them run automagically.</description>
+    </item>
+    
+    <item>
+      <title>Feeds moved to World and design overhaul</title>
+      <link>http://blog.zimbra.md/posts/feeds-moved-to-world-and-design-overhaul/</link>
+      <pubDate>Wed, 11 Sep 2019 12:03:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-moved-to-world-and-design-overhaul/</guid>
+      <description>It finally happened, Feeds is now part of the World group! Here&amp;rsquo;s the new repository! But don&amp;rsquo;t worry, I&amp;rsquo;ll keep up with the existing GitLab mirror.
+This doesn&amp;rsquo;t change too much in terms of development, but it surely makes the app more discoverable.</description>
+    </item>
+    
+    <item>
+      <title>Feeds 0.8: naming change and how to deal with Flatpak</title>
+      <link>http://blog.zimbra.md/posts/feeds-0-8-naming-change-and-how-to-deal-with-flatpak/</link>
+      <pubDate>Tue, 03 Sep 2019 16:34:14 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-0-8-naming-change-and-how-to-deal-with-flatpak/</guid>
+      <description>Feeds version 0.8 is coming. This release have been a little overdue, since I finally decided to change the name of the app from gnome-feeds to just gfeeds. This has to do with the use of the GNOME name, and besides even GNOME apps don&amp;rsquo;t use the GNOME prefix in their names.</description>
+    </item>
+    
+    <item>
+      <title>GitLab CI/CD for Flatpak</title>
+      <link>http://blog.zimbra.md/posts/gitlab-ci-cd-for-flatpak/</link>
+      <pubDate>Sat, 31 Aug 2019 12:24:16 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/gitlab-ci-cd-for-flatpak/</guid>
+      <description>Thanks to this document, and a quick look at nautilus&amp;rsquo;s git repo I was able to automatically generate fresh flatpaks directly from GitLab by using the integrated CI/CD system.
+My current setup isn&amp;rsquo;t perfect but it manages to automate flatpak builds.</description>
+    </item>
+    
+    <item>
+      <title>Early adopter experience with the new Radeon RX 5700XT on Arch Linux</title>
+      <link>http://blog.zimbra.md/posts/early-adopter-experience-with-the-new-radeon-rx-5700-xt-on-arch-linux/</link>
+      <pubDate>Sat, 31 Aug 2019 09:04:26 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/early-adopter-experience-with-the-new-radeon-rx-5700-xt-on-arch-linux/</guid>
+      <description>So I recently got myself a shiny new AMD Radeon RX 5700 XT GPU (that&amp;rsquo;s a mouthful).
+Let&amp;rsquo;s see how it does on Linux.
+Installation First, I use Arch (btw) and that makes things a lot easier, at least for now.</description>
+    </item>
+    
+    <item>
+      <title>Feeds 0.7 and more features to come</title>
+      <link>http://blog.zimbra.md/posts/feeds-0-7-and-more-features-to-come/</link>
+      <pubDate>Fri, 23 Aug 2019 11:51:36 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-0-7-and-more-features-to-come/</guid>
+      <description>Feeds version 0.7 should be out soon with all the features detailed in this post.
+The code starts to feel a little more complex, and it would probably use another small refactoring, but that&amp;rsquo;s not too important right now.</description>
+    </item>
+    
+    <item>
+      <title>Feeds: saving articles offline and marking stuff as read</title>
+      <link>http://blog.zimbra.md/posts/feeds-saving-articles-offline-and-marking-stuff-as-read/</link>
+      <pubDate>Tue, 20 Aug 2019 10:26:53 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-saving-articles-offline-and-marking-stuff-as-read/</guid>
+      <description>Recap In a previous post I layed out a roadmap for my feed reader application Feeds. Here&amp;rsquo;s a little update on how things are going.
+Alright, first I want to thank @Etamuk again.</description>
+    </item>
+    
+    <item>
+      <title>On privacy conscious comments and analytics</title>
+      <link>http://blog.zimbra.md/posts/on_comments_and_analytics/</link>
+      <pubDate>Wed, 14 Aug 2019 19:40:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/on_comments_and_analytics/</guid>
+      <description>This blog is fairly new, and so I still have to set up everything. Comments are obviously a very important part of a blog, especially if you want any kind of feedback on the stuff you&amp;rsquo;re doing.</description>
+    </item>
+    
+    <item>
+      <title>Feeds 0.6 and future roadmap</title>
+      <link>http://blog.zimbra.md/posts/feeds-0-6-and-roadmap-md/</link>
+      <pubDate>Mon, 12 Aug 2019 09:51:13 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-0-6-and-roadmap-md/</guid>
+      <description>Feeds version 0.6 is out with two important changes:
+German translation thanks to @Etamuk Concurrent feeds refresh About the translation, I know when a project starts becoming interesting, people want to contribute.</description>
+    </item>
+    
+    <item>
+      <title>Hello, world</title>
+      <link>http://blog.zimbra.md/posts/hello-world/</link>
+      <pubDate>Sun, 11 Aug 2019 10:38:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/hello-world/</guid>
+      <description>My new web home Hey people. I finally got around at creating a static blog.
+After using Hugo for a while, and initially deciding to try out Pelican, just to realize it&amp;rsquo;s in a sad, outdated state right now, I settled on Hexo.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.zimbra.md/posts/add-calendar-to-all-zimbra-users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/add-calendar-to-all-zimbra-users/</guid>
+      <description>Title: Add calendar to all Zimbra users Slug: add-calendar-to-all-zimbra-users Date: 2018-05-22 13:34:05 Category: Zimbra Tags: zimbra, bash Authors: JekA Summary: In acest post voi descrie o sacina ce tine de calendarul Zimbra.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.zimbra.md/posts/exportarea-drepturilor-administrator-delegat-zimbra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/exportarea-drepturilor-administrator-delegat-zimbra/</guid>
+      <description>Title: Export grants and views of a delegated admin Slug: exportarea-drepturilor-administrator-delegat-zimbra Date: 2018-10-18 09:42:19 Tags: zimbra, security Category: Zimbra Lang: en Translate: true Summary: Export grants &amp;amp; views of a delegated admin and create a new delegated admin with the same grants &amp;amp; views</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.zimbra.md/posts/how-to-transfer-the-spam-db-to-another-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/how-to-transfer-the-spam-db-to-another-server/</guid>
+      <description>Title: How to transfer the spam db to another server Date: 2018-05-24 13:52:22 Modified: 2018-05-24 13:52:22 Category: Zimbra Tags: zimbra, bash Slug: how-to-transfer-the-spam-db-to-another-server Lang: en Translate: true Summary:How to transfer the anti-spam database to another Zimbra server</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.zimbra.md/posts/notificarea-utilizatorilor-expirare-parola/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/notificarea-utilizatorilor-expirare-parola/</guid>
+      <description>Title: Notificarea utilizatorilor despre expirarea parolei Date: 2018-10-20 11:20 Modified: 2018-10-20 11:31 Category: Zimbra Tags: zimbra,bash Slug: notificarea-utilizatorilo-despre-expirarea-parolei Authors: JekA Summary: Script bash care notifica utilizatorii despre expirarea parolei
+###INTRO In instalatia default Zimbra notificarea catre utilizatori care informeaza utilizatorul despre expirarea parolei sale nu este transmis.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.zimbra.md/posts/open-relay-local-in-zimbra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/open-relay-local-in-zimbra/</guid>
+      <description>Title: Open Relay local in Zimbra Slug: open-relay-local-in-zimbra Date: 2018-10-18 09:42:19 Tags: zimbra, security Category: Zimbra Lang: en Translate: true Summary: Implicit in Zimbra este deschis Open Relay local , adica mesajele pot fi transmise cu modificarea identitatii in cadrul aceluiasi domeniu.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.zimbra.md/posts/zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss/</guid>
+      <description>Title: Zimbra Backup - rezervarea cutiilor postale in Zimbra FOSS Slug: zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss Date: 2018-06-22 09:19:47 Tags: Category: Zimbra Lang: en Translate: true Summary:
+Cerinte fata de sistemul de back-up Zimbra FOSS: Solutie Open Source</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.zimbra.md/posts/zimbra-bash-change-status-of-account/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/zimbra-bash-change-status-of-account/</guid>
+      <description>Title: Modifica conturile din statutul &amp;ldquo;Active&amp;rdquo; in &amp;ldquo;Closed&amp;rdquo; Date: 2018-05-17 11:20 Modified: 2018-05-17 11:31 Category: Zimbra Tags: zimbra, bash Slug: zimbra-bash-change-status-of-account Authors: JekA Summary: Modificarea in ciclu a conturilor e-mail din statutul &amp;ldquo;Active&amp;rdquo; in &amp;ldquo;Closed&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Securitatea in Zimbra OSE</title>
+      <link>http://blog.zimbra.md/posts/zimbra-security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/zimbra-security/</guid>
+      <description>Despre securitatea in Zimbra OSE</description>
+    </item>
+    
+  </channel>
+</rss>

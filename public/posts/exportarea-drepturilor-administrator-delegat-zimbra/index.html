@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head>
+    
+        <script>
+            if (location.host != new URL("http:\/\/blog.zimbra.md").host) location.href = "http:\/\/blog.zimbra.md"
+        </script>
+    
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/logo.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+        SoBo&#39;s Dev Log
+    </title>
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://blog.zimbra.md/css/styles.6f84514ad632600fba315252a38e35f30218f3d5ec268c1236f62782176917002e704c2b142a2d949bd831c6feabc3d6db35a3c6d6e151b839b9fe80cc19fa4f.css integrity="sha512-b4RRStYyYA&#43;6MVJSo4418wIY89XsJowSNvYnghdpFwAucEwrFCotlJvYMcb&#43;q8PW2zWjxtbhUbg5uf6AzBn6Tw==" />
+<meta name="author" content="JekA SoBo" />
+
+    
+    
+        <meta name="description" content=" and views of a delegated admin Slug: exportarea-drepturilor-administrator-delegat-zimbra Date: 2018-10-18 09:42:19 Tags: zimbra, security Category: Zimbra Lang: en Translate: true Summary: Export grants &amp;amp; views of a delegated admin and create a new delegated admin with the same grants &amp;amp; views" />
+    
+
+<meta property="og:site_name"
+    content='SoBo&#39;s Dev Log' />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="JekA SoBo" />
+    <meta
+        property="article:published_time"
+        content='0001-01-01T00:00:00Z&#43;0000' />
+    
+    <meta property="og:url" content="http://blog.zimbra.md/posts/exportarea-drepturilor-administrator-delegat-zimbra/" />
+    
+    
+    <meta property="og:image"
+        content="http://blog.zimbra.md/android-chrome-512x512.png" />
+    
+        <meta property="og:description" content="Title: Export grants and views of a delegated admin Slug: exportarea-drepturilor-administrator-delegat-zimbra Date: 2018-10-18 09:42:19 Tags: zimbra, security C" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='blog.zimbra.md'
+/>
+<meta property="twitter:url" content="http://blog.zimbra.md/posts/exportarea-drepturilor-administrator-delegat-zimbra/" />
+
+
+    <meta name="twitter:title" content="" />
+    
+    
+    
+    <meta name="twitter:image"
+        content="http://blog.zimbra.md/android-chrome-512x512.png" />
+    
+        <meta name="twitter:description" content="Title: Export grants and views of a delegated admin Slug: exportarea-drepturilor-administrator-delegat-zimbra Date: 2018-10-18 09:42:19 Tags: zimbra, security C" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">SoBo&#39;s Dev Log</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://blog.zimbra.md/pages/about/">
+                About
+            </a></li>
+        
+        
+            <li><a href="/archguide">Arch guide</a></li>
+        
+        
+            <li><a href="/tags">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <a class="nerdlink" onclick="newSearch();">&#xf002;</a>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.com/gabmus">
+    
+    
+        &#xf296;
+    
+    <span>
+        GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.gnome.org/gabmus">
+    
+    
+        &#xf7ab;
+    
+    <span>
+        GNOME GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://youtube.com/TechPillsNet">
+    
+    
+        &#xf16a;
+    
+    <span>
+        YouTube
+    </span>
+</a>
+<a
+    
+        rel="me"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://fosstodon.org/@gabmus">
+    
+    
+        <svg class='pseudofont' xmlns:svg='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16'><path d='M 7.4779094,-1.598624e-6 C 5.5602384,0.0156984 3.7155894,0.2233384 2.6405814,0.7170384 c 0,0 -2.13206093,0.9537 -2.13206093,4.20766 0,0.74512 -0.01448,1.63603 0.0091,2.58084 0.07742,3.1821946 0.58336693,6.3183886 3.52553593,7.0971276 1.356568,0.359063 2.521335,0.434289 3.45936,0.382729 1.701085,-0.09431 2.6560206,-0.607063 2.6560206,-0.607063 l -0.05611,-1.234252 c 0,0 -1.2156316,0.383272 -2.5808476,0.33656 -1.352609,-0.04639 -2.780561,-0.145832 -2.999328,-1.80651 -0.0202,-0.145872 -0.03031,-0.301902 -0.03031,-0.465714 0,-10e-7 1.327834,0.324572 3.010574,0.40167 1.028943,0.0472 1.993827,-0.06028 2.9738766,-0.177218 1.879445,-0.224425 3.515901,-1.382448 3.721577,-2.4405646 0.32407,-1.666815 0.297376,-4.067605 0.297376,-4.067605 0,-3.25396 -2.131943,-4.20766 -2.131943,-4.20766 C 11.288476,0.2233384 9.4426784,0.0156784 7.5250084,-1.598624e-6 Z M 5.3076104,2.5424984 c 0.798781,0 1.403595,0.30701 1.803551,0.92113 l 0.388886,0.65181 0.388884,-0.65181 c 0.399875,-0.61412 1.00469,-0.92113 1.803551,-0.92113 0.6903266,0 1.2465526,0.24267 1.6713186,0.71609 0.411755,0.47342 0.61677,1.11337 0.61677,1.91862 v 3.939988 h -1.560986 v -3.824218 c 0,-0.80613 -0.339166,-1.21531 -1.0176126,-1.21531 -0.750129,0 -1.126049,0.48533 -1.126049,1.44509 v 2.09324 h -1.551753 v -2.09324 c 0,-0.95976 -0.376039,-1.44509 -1.126168,-1.44509 -0.678446,0 -1.017613,0.40918 -1.017613,1.21531 v 3.824218 h -1.560985 v -3.939988 c 0,-0.80525 0.205053,-1.4452 0.616889,-1.91862 0.424685,-0.47342 0.980911,-0.71609 1.671317,-0.71609 z' /></svg>
+    
+    <span>
+        Mastodon
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1></h1>
+    
+    
+        <p class="date">
+            <span title='Date'> </span>
+    0001-01-01
+
+</p>
+    
+    
+    
+    
+    <div><p>Title: Export grants and views of a delegated admin
+Slug: exportarea-drepturilor-administrator-delegat-zimbra
+Date: 2018-10-18 09:42:19
+Tags: zimbra, security
+Category: Zimbra
+Lang: en
+Translate: true
+Summary: Export grants &amp; views of a delegated admin and create a new delegated admin with the same grants &amp; views</p>
+<p>###Problem</p>
+<p>Export grants &amp; views of a delegated admin and create a new delegated admin with the same grants &amp; views
+###Solution</p>
+<p>Note: This is only applicable for legacy admin module and does not apply for Zimbra NG module.</p>
+<p>Here we have an existing delegated admin &ldquo;<a href="mailto:myadmin@DOMAIN.COM">myadmin@DOMAIN.COM</a>&rdquo; and we will create a new delegated admin &lsquo;&ldquo;<a href="mailto:newadmin@DOMAIN.COM">newadmin@DOMAIN.COM</a>&rdquo; with the same views and grants.</p>
+<p>1). Check enabled views of existing delegated admin:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmprov -l ga myadmin@DOMAIN.COM | egrep -i &#39;zimbraAdminConsoleUIComponents|zimbraIsDelegatedAdminAccount:&#39; 
+</span></span></code></pre></div><p>Output:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zimbraAdminConsoleUIComponents: accountListView
+</span></span><span style="display:flex;"><span>zimbraAdminConsoleUIComponents: downloadsView
+</span></span><span style="display:flex;"><span>zimbraAdminConsoleUIComponents: DLListView
+</span></span><span style="display:flex;"><span>zimbraAdminConsoleUIComponents: aliasListView
+</span></span><span style="display:flex;"><span>zimbraAdminConsoleUIComponents: resourceListView
+</span></span><span style="display:flex;"><span>zimbraAdminConsoleUIComponents: saveSearch
+</span></span><span style="display:flex;"><span>zimbraIsDelegatedAdminAccount: TRUE 
+</span></span></code></pre></div><p>2). Check or export assigned rights of the delegated admin :-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmprov gg -g usr myadmin@DOMAIN.COM 
+</span></span></code></pre></div><p>Output:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    target type  target id                            target name        grantee type grantee id                           grantee name       right
+</span></span><span style="display:flex;"><span>    ------------ ------------------------------------ ------------------ ------------ ------------------------------------ ------------------ --------------------
+</span></span><span style="display:flex;"><span>    global                                            globalacltarget    usr          87609353-a8fb-4ed5-b750-6b538cd52f35 myadmin@DOMAIN.COM adminLoginCalendarResourceAs
+</span></span><span style="display:flex;"><span>    global                                            globalacltarget    usr          87609353-a8fb-4ed5-b750-6b538cd52f35 myadmin@DOMAIN.COM domainAdminZimletRights
+</span></span><span style="display:flex;"><span>    domain       1ccb92be-56cc-4962-b964-b07af84dc118 DOMAIN.COM         usr          87609353-a8fb-4ed5-b750-6b538cd52f35 myadmin@DOMAIN.COM domainAdminConsoleRights
+</span></span></code></pre></div><p>3). Now we have to fine tune above output for a new admin.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>global usr myadmin@DOMAIN.COM adminLoginCalendarResourceAs
+</span></span><span style="display:flex;"><span>global usr myadmin@DOMAIN.COM domainAdminZimletRights
+</span></span><span style="display:flex;"><span>domain DOMAIN.COM usr myadmin@DOMAIN.COM domainAdminConsoleRights 
+</span></span></code></pre></div><p>4). Create a file &ldquo;/tmp/grants.txt&rdquo; with the exported grants and replace old admin name with new delegated admin.
+Prepare exported grant file for new delegated admin (<a href="mailto:newadmin@DOMAIN.COM">newadmin@DOMAIN.COM</a>). The file must have grants in the following format:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>grr global usr newadmin@DOMAIN.COM adminLoginCalendarResourceAs
+</span></span><span style="display:flex;"><span>grr global usr newadmin@DOMAIN.COM domainAdminZimletRights 
+</span></span><span style="display:flex;"><span>grr domain DOMAIN.COM usr newadmin@DOMAIN.COM domainAdminConsoleRights 
+</span></span></code></pre></div><p>5). Now we will create a new delegated admin with the same views as existing admin has: -</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmprov ca newadmin@DOMAIN.COM &lt;PASSWORD&gt; zimbraIsDelegatedAdminAccount TRUE zimbraAdminConsoleUIComponents accountListView zimbraAdminConsoleUIComponents downloadsView zimbraAdminConsoleUIComponents DLListView zimbraAdminConsoleUIComponents aliasListView zimbraAdminConsoleUIComponents resourceListView zimbraAdminConsoleUIComponents saveSearch
+</span></span></code></pre></div><p>6). Here we will assign grants from the prepared file in Step4:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmprov &lt; /tmp/grants.txt 
+</span></span></code></pre></div><p>7). Now check grants of newly created delegated admin, the output of below command must be similar to the output of Step2:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmprov gg -g usr newadmin@DOMAIN.COM 
+</span></span></code></pre></div><p>###Extra Notes:</p>
+<p>Some additional tips for those admins who loves to play with sed and awk:-</p>
+<p>Here we are exporting and redirecting grants to a file, and preparing grants for new delegated admin.
+NOTE: These steps are only for Domain and Global level grants. If there are other level grants assigned to delegated admin then use &ldquo;awk&rdquo; carefully to extract correct column.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmprov gg -g usr myadmin@DOMAIN.COM | grep ^global | awk &#39;{print $1,$3,$5,$6}&#39;  &gt;&gt; /tmp/grants.txt
+</span></span><span style="display:flex;"><span>zmprov gg -g usr myadmin@DOMAIN.COM | grep ^domain | awk &#39;{print $1,$3,$4,$6,$7}&#39;  &gt;&gt; /tmp/grants.txt 
+</span></span></code></pre></div><p>Check the content of the file &ldquo;/tmp/grants.txt&rdquo; and the output will look like the following:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cat /tmp/grants.txt 
+</span></span><span style="display:flex;"><span>global usr newadmin@DOMAIN.COM adminLoginCalendarResourceAs
+</span></span><span style="display:flex;"><span>global usr newadmin@DOMAIN.COM domainAdminZimletRights
+</span></span><span style="display:flex;"><span>domain DOMAIN.COM usr newadmin@DOMAIN.COM domainAdminConsoleRights 
+</span></span></code></pre></div><p>Add &ldquo;grr&rdquo; at the beginning of each line:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sed -i &#39;s/^/grr /&#39; /tmp/grants.txt 
+</span></span></code></pre></div><p>Now file will show content in following format:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cat /tmp/grants.txt 
+</span></span><span style="display:flex;"><span>grr global usr newadmin@DOMAIN.COM adminLoginCalendarResourceAs
+</span></span><span style="display:flex;"><span>grr global usr newadmin@DOMAIN.COM domainAdminZimletRights
+</span></span><span style="display:flex;"><span>grr domain DOMAIN.COM usr newadmin@DOMAIN.COM domainAdminConsoleRights 
+</span></span></code></pre></div><p>Replace old delegated admin email-id with new delegated admin:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sed -i &#39;s/myadmin@DOMAIN.COM/newadmin@DOMAIN.COM/&#39; /tmp/grants.txt 
+</span></span></code></pre></div><p>Now we will assign grants to new delegated admin with prepared file /tmp/grants.txt</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmprov &lt; /tmp/grants.txt 
+</span></span></code></pre></div></div>
+</article>
+
+
+    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="openFediInstanceDialog();">
+        Share on the Fediverse
+    </a>
+    <div id="fediInstanceDialog">
+        <div class="bg" onclick="closeFediInstanceDialog();"></div>
+        <div class="dialog">
+            <h2>Enter your instance&#39;s address</h2>
+            <input id="fediInstanceInput" placeholder='Eg. mastodon.social' type="text" />
+            <div class="buttons">
+                <a class="shareBtn" onclick="closeFediInstanceDialog();">Cancel</a>
+                <a class="shareBtn" onclick="shareOnFedi();">Share</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var articleTitle = '';
+        var articleLink = 'http:\/\/blog.zimbra.md\/posts\/exportarea-drepturilor-administrator-delegat-zimbra\/';
+        var fediInstanceDialog = document.getElementById('fediInstanceDialog');
+        var fediInstanceInput = document.getElementById('fediInstanceInput');
+        function openFediInstanceDialog() {
+            fediInstanceDialog.classList.add('open');
+        }
+        function closeFediInstanceDialog() {
+            fediInstanceDialog.classList.remove('open');
+        }
+        function fixURL(url) {
+            if (url.substr(0, 8) == 'https://') return url;
+            if (url.substr(0, 7) == 'http://') return url;
+            return 'https://' + url;
+        }
+        function shareOnFedi() {
+            let instance = fediInstanceInput.value.trim();
+            if (!instance) {
+                return;
+            }
+            instance = fixURL(instance);
+            window.open(
+                `${instance}/share?text=${articleTitle}%20${articleLink}`,
+                '__blank'
+            );
+            closeFediInstanceDialog();
+        }
+    </script>
+
+
+
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+
+<div id="ficurinia-cactus-comments"></div>
+
+<script>
+initComments({
+    node: document.getElementById("ficurinia-cactus-comments"),
+    defaultHomeserverUrl: 'https:\/\/matrix.cactus.chat:8448',
+    serverName: 'cactus.chat',
+    siteName: "fleek.eu.org",
+    commentSectionId: "ca7b87e2c9452d11f327423c74db4be2"
+})
+</script>
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2022 &copy; JekA SoBo - <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

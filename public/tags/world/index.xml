@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>world on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/world/</link>
+    <description>Recent content in world on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Fri, 30 Oct 2020 09:55:23 +0100</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/world/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giara is a reddit app for Linux</title>
+      <link>http://blog.zimbra.md/posts/giara_is_a_reddit_app_for_linux/</link>
+      <pubDate>Fri, 30 Oct 2020 09:55:23 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/giara_is_a_reddit_app_for_linux/</guid>
+      <description>I am a quite avid reddit user. Like it or not, reddit is a very central place where communities for stuff that I care about tend to aggregate.
+For the longest time, I have felt the need for a reddit app on my Linux desktop, and I waited and kept waiting for one that would finally allow me to break free of using the web version.</description>
+    </item>
+    
+    <item>
+      <title>Feeds moved to World and design overhaul</title>
+      <link>http://blog.zimbra.md/posts/feeds-moved-to-world-and-design-overhaul/</link>
+      <pubDate>Wed, 11 Sep 2019 12:03:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-moved-to-world-and-design-overhaul/</guid>
+      <description>It finally happened, Feeds is now part of the World group! Here&amp;rsquo;s the new repository! But don&amp;rsquo;t worry, I&amp;rsquo;ll keep up with the existing GitLab mirror.
+This doesn&amp;rsquo;t change too much in terms of development, but it surely makes the app more discoverable.</description>
+    </item>
+    
+  </channel>
+</rss>

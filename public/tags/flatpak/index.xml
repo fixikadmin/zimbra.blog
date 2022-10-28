@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flatpak on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/flatpak/</link>
+    <description>Recent content in flatpak on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Sat, 02 Jan 2021 09:42:43 +0100</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/flatpak/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making a D-Bus Daemon with Python and Flatpak</title>
+      <link>http://blog.zimbra.md/posts/making-a-dbus-daemon/</link>
+      <pubDate>Sat, 02 Jan 2021 09:42:43 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/making-a-dbus-daemon/</guid>
+      <description>I learned most of this stuff from this awesome series of articles by Larry Price. Give it a read, it&amp;rsquo;s worth it.
+Why D-Bus daemons are quite useful tools. What would you need them for?</description>
+    </item>
+    
+    <item>
+      <title>GitLab CI/CD for Flatpak</title>
+      <link>http://blog.zimbra.md/posts/gitlab-ci-cd-for-flatpak/</link>
+      <pubDate>Sat, 31 Aug 2019 12:24:16 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/gitlab-ci-cd-for-flatpak/</guid>
+      <description>Thanks to this document, and a quick look at nautilus&amp;rsquo;s git repo I was able to automatically generate fresh flatpaks directly from GitLab by using the integrated CI/CD system.
+My current setup isn&amp;rsquo;t perfect but it manages to automate flatpak builds.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head>
+    
+        <script>
+            if (location.host != new URL("http:\/\/fleek.eu.org:1313").host) location.href = "http:\/\/fleek.eu.org:1313"
+        </script>
+    
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/logo.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+        GabMus&#39;s Dev Log
+    </title>
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://fleek.eu.org:1313/css/styles.6f84514ad632600fba315252a38e35f30218f3d5ec268c1236f62782176917002e704c2b142a2d949bd831c6feabc3d6db35a3c6d6e151b839b9fe80cc19fa4f.css integrity="sha512-b4RRStYyYA&#43;6MVJSo4418wIY89XsJowSNvYnghdpFwAucEwrFCotlJvYMcb&#43;q8PW2zWjxtbhUbg5uf6AzBn6Tw==" />
+<meta name="author" content="Gabriele Musco" />
+
+    
+    
+        <meta name="description" content="to all Zimbra users Slug: add-calendar-to-all-zimbra-users Date: 2018-05-22 13:34:05 Category: Zimbra Tags: zimbra, bash Authors: JekA Summary: In acest post voi descrie o sacina ce tine de calendarul Zimbra." />
+    
+
+<meta property="og:site_name"
+    content='GabMus&#39;s Dev Log' />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="Gabriele Musco" />
+    <meta
+        property="article:published_time"
+        content='0001-01-01T00:00:00Z&#43;0000' />
+    
+    <meta property="og:url" content="http://fleek.eu.org:1313/posts/2018-05-22-add-calendar-to-all-zimbra-users/" />
+    
+    
+    <meta property="og:image"
+        content="http://fleek.eu.org:1313/android-chrome-512x512.png" />
+    
+        <meta property="og:description" content="Title: Add calendar to all Zimbra users Slug: add-calendar-to-all-zimbra-users Date: 2018-05-22 13:34:05 Category: Zimbra Tags: zimbra, bash Authors: JekA Summa" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='fleek.eu.org:1313'
+/>
+<meta property="twitter:url" content="http://fleek.eu.org:1313/posts/2018-05-22-add-calendar-to-all-zimbra-users/" />
+
+
+    <meta name="twitter:title" content="" />
+    
+    
+    
+    <meta name="twitter:image"
+        content="http://fleek.eu.org:1313/android-chrome-512x512.png" />
+    
+        <meta name="twitter:description" content="Title: Add calendar to all Zimbra users Slug: add-calendar-to-all-zimbra-users Date: 2018-05-22 13:34:05 Category: Zimbra Tags: zimbra, bash Authors: JekA Summa" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">GabMus&#39;s Dev Log</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://fleek.eu.org:1313/pages/about/">
+                About
+            </a></li>
+        
+        
+            <li><a href="/archguide">Arch guide</a></li>
+        
+        
+            <li><a href="/tags">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <a class="nerdlink" onclick="newSearch();">&#xf002;</a>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.com/gabmus">
+    
+    
+        &#xf296;
+    
+    <span>
+        GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.gnome.org/gabmus">
+    
+    
+        &#xf7ab;
+    
+    <span>
+        GNOME GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://youtube.com/TechPillsNet">
+    
+    
+        &#xf16a;
+    
+    <span>
+        YouTube
+    </span>
+</a>
+<a
+    
+        rel="me"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://fosstodon.org/@gabmus">
+    
+    
+        <svg class='pseudofont' xmlns:svg='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16'><path d='M 7.4779094,-1.598624e-6 C 5.5602384,0.0156984 3.7155894,0.2233384 2.6405814,0.7170384 c 0,0 -2.13206093,0.9537 -2.13206093,4.20766 0,0.74512 -0.01448,1.63603 0.0091,2.58084 0.07742,3.1821946 0.58336693,6.3183886 3.52553593,7.0971276 1.356568,0.359063 2.521335,0.434289 3.45936,0.382729 1.701085,-0.09431 2.6560206,-0.607063 2.6560206,-0.607063 l -0.05611,-1.234252 c 0,0 -1.2156316,0.383272 -2.5808476,0.33656 -1.352609,-0.04639 -2.780561,-0.145832 -2.999328,-1.80651 -0.0202,-0.145872 -0.03031,-0.301902 -0.03031,-0.465714 0,-10e-7 1.327834,0.324572 3.010574,0.40167 1.028943,0.0472 1.993827,-0.06028 2.9738766,-0.177218 1.879445,-0.224425 3.515901,-1.382448 3.721577,-2.4405646 0.32407,-1.666815 0.297376,-4.067605 0.297376,-4.067605 0,-3.25396 -2.131943,-4.20766 -2.131943,-4.20766 C 11.288476,0.2233384 9.4426784,0.0156784 7.5250084,-1.598624e-6 Z M 5.3076104,2.5424984 c 0.798781,0 1.403595,0.30701 1.803551,0.92113 l 0.388886,0.65181 0.388884,-0.65181 c 0.399875,-0.61412 1.00469,-0.92113 1.803551,-0.92113 0.6903266,0 1.2465526,0.24267 1.6713186,0.71609 0.411755,0.47342 0.61677,1.11337 0.61677,1.91862 v 3.939988 h -1.560986 v -3.824218 c 0,-0.80613 -0.339166,-1.21531 -1.0176126,-1.21531 -0.750129,0 -1.126049,0.48533 -1.126049,1.44509 v 2.09324 h -1.551753 v -2.09324 c 0,-0.95976 -0.376039,-1.44509 -1.126168,-1.44509 -0.678446,0 -1.017613,0.40918 -1.017613,1.21531 v 3.824218 h -1.560985 v -3.939988 c 0,-0.80525 0.205053,-1.4452 0.616889,-1.91862 0.424685,-0.47342 0.980911,-0.71609 1.671317,-0.71609 z' /></svg>
+    
+    <span>
+        Mastodon
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1></h1>
+    
+    
+        <p class="date">
+            <span title='Date'> </span>
+    0001-01-01
+
+</p>
+    
+    
+    
+    
+    <div><p>Title: Add calendar to all Zimbra users
+Slug: add-calendar-to-all-zimbra-users
+Date: 2018-05-22 13:34:05
+Category: Zimbra
+Tags: zimbra, bash
+Authors: JekA
+Summary: In acest post voi descrie o sacina ce tine de calendarul Zimbra. Celendarul Zimbra permite multe operatii insa unele functii pot fi efectuate doar din consola. Deasemenea utilizarea unui script usureaza automatizarea procesului.<br>
+###Sarcina pusa este:</p>
+<ol>
+<li>Crarea unui calendar comun pentru toti utilizatorii cu urmatoarele proprietati:
+<ul>
+<li>Calendarul trebuie sa fie inclus in toate conturile participantilor</li>
+<li>Va fi completat de fiecare participant in conformitate cu programul zilei propriu.</li>
+<li>Participantii pot vedea statutul celulilalt paricipant (Ocupar/Disponibil) in calendarul sau.</li>
+<li>Participantii vor fi adaugati automat la crearea unui nou utilizator</li>
+<li>Un cont specializat va integra toate calendarele pentru a crea reguli VOIP de readresare a apelurilor</li>
+</ul>
+</li>
+<li>Crearea unui calendar comun cu zilelel de odihna si sarbatori.
+<ul>
+<li>Calendarul trebuie sa fie public.</li>
+<li>Va fi administrat doar de o persoana</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-crarea-unui-calendar-comun-pentru-toti-utilizatorii">1. Crarea unui calendar comun pentru toti utilizatorii</h3>
+<p>Se creaza un Operator de calendar, de ex. <code>robocall@domen.md</code>
+Se creaza un un grup de distibutie cu toti paricipantii, de ex. <code>call.center@domen.md</code>
+In acest grup se adauga toti participantii care vor partaja calendarele proprii</p>
+<p>Se executa comanda <code>zmprov</code>  pentru a aadauga calendele din grupul <code>call.center@domen.md</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmmailbox -z -m robocall@domen.md modifyFolderGrant /Calendar group  call.center@domen.md r
+</span></span></code></pre></div><p>Se adauga calendarele partajate ale participantilor grupului</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmmailbox -z -m robocall@domen.md createMountpoint --view appointment &#34;/OP1&#34; operator1@domen.md /Calendar
+</span></span><span style="display:flex;"><span>zmmailbox -z -m robocall@domen.md createMountpoint --view appointment &#34;/OP2&#34; operator2@domen.md /Calendar
+</span></span><span style="display:flex;"><span>zmmailbox -z -m robocall@domen.md createMountpoint --view appointment &#34;/OP3&#34; operator3@domen.md /Calendar
+</span></span></code></pre></div><p>Adaugarea calendarului in contul de integrare prin Export/Import</p>
+<p>Salvam calendarul necesar</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget --user operator1@domen.md --password password --no-check-certificate https://hostname/home/operator1@domen.md/Calendar.ics
+</span></span></code></pre></div><p>Importam in calendarul contului specilaizat</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl --insecure  -u robcall@domen.md:password --upload-file Calendar.ics https://hostname/service/home/robocall@domen.md/Calendar?fmt=ics
+</span></span></code></pre></div><p>###2. Adaugarea mai multor calendare ale utilizatorilor intr-un calendar specializat.</p>
+<p>Creem calendarul</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmprov sm operator2@domen.md createFolder --view appointment --color blue --flags &#34;#&#34; /RoboCal
+</span></span></code></pre></div><p>Setam permisiuni de citire pentru calendareele create pentru utilizatorii; operatpr1, operator2, operator3</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmmailbox -z -m operator1@domen.md modifyFolderGrant /RoboCal group call.center@domen.md r
+</span></span><span style="display:flex;"><span>zmmailbox -z -m operator2@domen.md modifyFolderGrant /RoboCal group call.center@domen.md r
+</span></span><span style="display:flex;"><span>zmmailbox -z -m operator3@domen.md modifyFolderGrant /RoboCal group call.center@domen.md r
+</span></span></code></pre></div><p>Se include fiecare calendar in contul specializat</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zmmailbox -z -m robocall@domen.md createMountpoint --view appointment -color blue --flags &#34;#&#34; &#34;/Operator1&#34; operator1@domen.md /RoboCal
+</span></span><span style="display:flex;"><span>zmmailbox -z -m robocall@domen.md createMountpoint --view appointment -color blue --flags &#34;#&#34; &#34;/Operator2&#34; operator2@domen.md /RoboCal
+</span></span><span style="display:flex;"><span>zmmailbox -z -m robocall@domen.md createMountpoint --view appointment -color blue --flags &#34;#&#34; &#34;/Operator3&#34; operator3@domen.md /RoboCal
+</span></span></code></pre></div><p><code>--flags &quot;#&quot;</code>  semnifica ca calendarul este bifat</p>
+<p>Pentru a automatiza procesul vom folosi un script bash:  <a href="https://wiki.zimbra.com/wiki/Automating_Reciprocal_Calendar_Sharing">https://wiki.zimbra.com/wiki/Automating_Reciprocal_Calendar_Sharing</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff79c6">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$#</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;1&#34;</span> <span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">then</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">users</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>zmsoap --type admin --zadmin GetDistributionListRequest/dl<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$1</span><span style="color:#f1fa8c">&#34;</span> @by<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;name&#34;</span> | grep dlm | sed -e <span style="color:#f1fa8c">&#39;s/.*&lt;dlm&gt;\(.*\)&lt;\/dlm&gt;/\1/g&#39;</span><span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$users</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> u in <span style="color:#8be9fd;font-style:italic">$users</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">echo</span> zmmailbox -z -m <span style="color:#8be9fd;font-style:italic">$u</span> modifyFolderGrant /RoboCal group call.center@domen.md r
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">uname</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>zmmailbox -z -m <span style="color:#8be9fd;font-style:italic">$u</span> gid -v | grep zimbraPrefFromDisplay | sed -e <span style="color:#f1fa8c">&#39;s/.*: &#34;\(.*\)&#34;,/\1/&#39;</span><span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> v in <span style="color:#8be9fd;font-style:italic">$users</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#8be9fd;font-style:italic">$u</span> !<span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$v</span> <span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">echo</span> zmmailbox -z -m <span style="color:#8be9fd;font-style:italic">$v</span> createMountpoint --view appointment <span style="color:#f1fa8c">\&#34;</span>/<span style="color:#8be9fd;font-style:italic">$uname</span><span style="color:#f1fa8c">\&#39;</span>s Calendar<span style="color:#f1fa8c">\&#34;</span> <span style="color:#8be9fd;font-style:italic">$u</span> /RoboCal
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">fi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;usage: </span><span style="color:#8be9fd;font-style:italic">$0</span><span style="color:#f1fa8c"> distlist@zimbradomain.com&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">fi</span>
+</span></span></code></pre></div><p>Salvam scriptul ca <em>zimbraRecipCalShare.sh</em>.  Dam drepturi de executie</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>chmod +x zimbraRecipCalShare.sh
+</span></span></code></pre></div><p>Rulam scriptul de sub utilizatorul zimbra (parametrul liniei este grupul in care sunt adaugati toti participantii)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zimbraRecipCalShare.sh call.center@domen.md &gt; check_me_first.sh
+</span></span></code></pre></div><p>Verifica daca continutul scriptului contine comenzi <code>zmmailbox</code> corecte si executam rezultatul</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bash check_me_first.sh
+</span></span></code></pre></div><p>In rezultat fiecare din participanti va avea calendarele celorlalti cu drepturi doar de citire.</p>
+</div>
+</article>
+
+
+    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="openFediInstanceDialog();">
+        Share on the Fediverse
+    </a>
+    <div id="fediInstanceDialog">
+        <div class="bg" onclick="closeFediInstanceDialog();"></div>
+        <div class="dialog">
+            <h2>Enter your instance&#39;s address</h2>
+            <input id="fediInstanceInput" placeholder='Eg. mastodon.social' type="text" />
+            <div class="buttons">
+                <a class="shareBtn" onclick="closeFediInstanceDialog();">Cancel</a>
+                <a class="shareBtn" onclick="shareOnFedi();">Share</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var articleTitle = '';
+        var articleLink = 'http:\/\/fleek.eu.org:1313\/posts\/2018-05-22-add-calendar-to-all-zimbra-users\/';
+        var fediInstanceDialog = document.getElementById('fediInstanceDialog');
+        var fediInstanceInput = document.getElementById('fediInstanceInput');
+        function openFediInstanceDialog() {
+            fediInstanceDialog.classList.add('open');
+        }
+        function closeFediInstanceDialog() {
+            fediInstanceDialog.classList.remove('open');
+        }
+        function fixURL(url) {
+            if (url.substr(0, 8) == 'https://') return url;
+            if (url.substr(0, 7) == 'http://') return url;
+            return 'https://' + url;
+        }
+        function shareOnFedi() {
+            let instance = fediInstanceInput.value.trim();
+            if (!instance) {
+                return;
+            }
+            instance = fixURL(instance);
+            window.open(
+                `${instance}/share?text=${articleTitle}%20${articleLink}`,
+                '__blank'
+            );
+            closeFediInstanceDialog();
+        }
+    </script>
+
+
+
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+
+<div id="ficurinia-cactus-comments"></div>
+
+<script>
+initComments({
+    node: document.getElementById("ficurinia-cactus-comments"),
+    defaultHomeserverUrl: 'https:\/\/matrix.cactus.chat:8448',
+    serverName: 'cactus.chat',
+    siteName: "gabmus.org",
+    commentSectionId: "f84671a39366c01fcf1b0a5d6392b5a2"
+})
+</script>
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2022 &copy; Gabriele Musco - <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

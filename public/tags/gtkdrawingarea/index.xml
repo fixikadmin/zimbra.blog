@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gtkdrawingarea on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/gtkdrawingarea/</link>
+    <description>Recent content in gtkdrawingarea on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Sat, 03 Oct 2020 10:23:54 +0200</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/gtkdrawingarea/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create an auto resizing image widget with GTK3 and Python</title>
+      <link>http://blog.zimbra.md/posts/create_an_auto-resizing_image_widget_with_gtk3_and_python/</link>
+      <pubDate>Sat, 03 Oct 2020 10:23:54 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/create_an_auto-resizing_image_widget_with_gtk3_and_python/</guid>
+      <description>One of the most common things you might wanna do with images, that is making them automatically resize to adapt to the available space they have, is not possible with Gtk.</description>
+    </item>
+    
+  </channel>
+</rss>

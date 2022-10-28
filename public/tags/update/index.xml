@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>update on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/update/</link>
+    <description>Recent content in update on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Wed, 11 Sep 2019 12:03:41 +0000</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feeds moved to World and design overhaul</title>
+      <link>http://blog.zimbra.md/posts/feeds-moved-to-world-and-design-overhaul/</link>
+      <pubDate>Wed, 11 Sep 2019 12:03:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-moved-to-world-and-design-overhaul/</guid>
+      <description>It finally happened, Feeds is now part of the World group! Here&amp;rsquo;s the new repository! But don&amp;rsquo;t worry, I&amp;rsquo;ll keep up with the existing GitLab mirror.
+This doesn&amp;rsquo;t change too much in terms of development, but it surely makes the app more discoverable.</description>
+    </item>
+    
+    <item>
+      <title>Feeds 0.8: naming change and how to deal with Flatpak</title>
+      <link>http://blog.zimbra.md/posts/feeds-0-8-naming-change-and-how-to-deal-with-flatpak/</link>
+      <pubDate>Tue, 03 Sep 2019 16:34:14 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-0-8-naming-change-and-how-to-deal-with-flatpak/</guid>
+      <description>Feeds version 0.8 is coming. This release have been a little overdue, since I finally decided to change the name of the app from gnome-feeds to just gfeeds. This has to do with the use of the GNOME name, and besides even GNOME apps don&amp;rsquo;t use the GNOME prefix in their names.</description>
+    </item>
+    
+    <item>
+      <title>Feeds 0.7 and more features to come</title>
+      <link>http://blog.zimbra.md/posts/feeds-0-7-and-more-features-to-come/</link>
+      <pubDate>Fri, 23 Aug 2019 11:51:36 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-0-7-and-more-features-to-come/</guid>
+      <description>Feeds version 0.7 should be out soon with all the features detailed in this post.
+The code starts to feel a little more complex, and it would probably use another small refactoring, but that&amp;rsquo;s not too important right now.</description>
+    </item>
+    
+    <item>
+      <title>Feeds: saving articles offline and marking stuff as read</title>
+      <link>http://blog.zimbra.md/posts/feeds-saving-articles-offline-and-marking-stuff-as-read/</link>
+      <pubDate>Tue, 20 Aug 2019 10:26:53 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-saving-articles-offline-and-marking-stuff-as-read/</guid>
+      <description>Recap In a previous post I layed out a roadmap for my feed reader application Feeds. Here&amp;rsquo;s a little update on how things are going.
+Alright, first I want to thank @Etamuk again.</description>
+    </item>
+    
+    <item>
+      <title>Feeds 0.6 and future roadmap</title>
+      <link>http://blog.zimbra.md/posts/feeds-0-6-and-roadmap-md/</link>
+      <pubDate>Mon, 12 Aug 2019 09:51:13 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-0-6-and-roadmap-md/</guid>
+      <description>Feeds version 0.6 is out with two important changes:
+German translation thanks to @Etamuk Concurrent feeds refresh About the translation, I know when a project starts becoming interesting, people want to contribute.</description>
+    </item>
+    
+  </channel>
+</rss>

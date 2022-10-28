@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>whatip on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/whatip/</link>
+    <description>Recent content in whatip on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Sun, 21 Nov 2021 11:52:10 +0100</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/whatip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gtk4, LibAdwaita and the new Feeds</title>
+      <link>http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/</link>
+      <pubDate>Sun, 21 Nov 2021 11:52:10 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/</guid>
+      <description>So, something big is coming for my news reader app Feeds.
+Most of this year, as far as personal projects go, I spent at close contact with Gtk4, libadwaita and the awesome people over at the various matrix chat rooms.</description>
+    </item>
+    
+  </channel>
+</rss>

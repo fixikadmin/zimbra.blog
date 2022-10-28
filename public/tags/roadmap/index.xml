@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>roadmap on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/roadmap/</link>
+    <description>Recent content in roadmap on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Fri, 23 Aug 2019 11:51:36 +0000</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/roadmap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feeds 0.7 and more features to come</title>
+      <link>http://blog.zimbra.md/posts/feeds-0-7-and-more-features-to-come/</link>
+      <pubDate>Fri, 23 Aug 2019 11:51:36 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-0-7-and-more-features-to-come/</guid>
+      <description>Feeds version 0.7 should be out soon with all the features detailed in this post.
+The code starts to feel a little more complex, and it would probably use another small refactoring, but that&amp;rsquo;s not too important right now.</description>
+    </item>
+    
+    <item>
+      <title>Feeds 0.6 and future roadmap</title>
+      <link>http://blog.zimbra.md/posts/feeds-0-6-and-roadmap-md/</link>
+      <pubDate>Mon, 12 Aug 2019 09:51:13 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/feeds-0-6-and-roadmap-md/</guid>
+      <description>Feeds version 0.6 is out with two important changes:
+German translation thanks to @Etamuk Concurrent feeds refresh About the translation, I know when a project starts becoming interesting, people want to contribute.</description>
+    </item>
+    
+  </channel>
+</rss>

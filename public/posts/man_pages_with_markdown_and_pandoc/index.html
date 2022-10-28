@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head>
+    
+        <script>
+            if (location.host != new URL("http:\/\/blog.zimbra.md").host) location.href = "http:\/\/blog.zimbra.md"
+        </script>
+    
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/logo.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Man pages with Markdown and Pandoc  &ndash;
+        
+        SoBo&#39;s Dev Log
+    </title>
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://blog.zimbra.md/css/styles.6f84514ad632600fba315252a38e35f30218f3d5ec268c1236f62782176917002e704c2b142a2d949bd831c6feabc3d6db35a3c6d6e151b839b9fe80cc19fa4f.css integrity="sha512-b4RRStYyYA&#43;6MVJSo4418wIY89XsJowSNvYnghdpFwAucEwrFCotlJvYMcb&#43;q8PW2zWjxtbhUbg5uf6AzBn6Tw==" />
+<meta name="author" content="JekA SoBo" />
+
+    
+        <meta name="keywords" content='documentation, groff, man, manual, markdown, pandoc' />
+    
+    
+        <meta name="description" content="e. They genuinely are. In any *nix system you can just get documentation on your programs or even some programming things (namely a lot of C stuff, this was very useful in University) offline by just using a tiny simple command." />
+    
+
+<meta property="og:site_name"
+    content='SoBo&#39;s Dev Log' />
+
+    <meta property="og:title" content="Man pages with Markdown and Pandoc" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="JekA SoBo" />
+    <meta
+        property="article:published_time"
+        content='2020-08-31T19:49:06Z&#43;0200' />
+    
+        
+            <meta property="article:tag" content="documentation" />
+        
+            <meta property="article:tag" content="groff" />
+        
+            <meta property="article:tag" content="man" />
+        
+            <meta property="article:tag" content="manual" />
+        
+            <meta property="article:tag" content="markdown" />
+        
+            <meta property="article:tag" content="pandoc" />
+        
+    
+    <meta property="og:url" content="http://blog.zimbra.md/posts/man_pages_with_markdown_and_pandoc/" />
+    
+    
+    <meta property="og:image"
+        content="http://blog.zimbra.md/android-chrome-512x512.png" />
+    
+        <meta property="og:description" content="Man pages are awesome. They genuinely are. In any *nix system you can just get documentation on your programs or even some programming things (namely a lot of C" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='blog.zimbra.md'
+/>
+<meta property="twitter:url" content="http://blog.zimbra.md/posts/man_pages_with_markdown_and_pandoc/" />
+
+
+    <meta name="twitter:title" content="Man pages with Markdown and Pandoc" />
+    
+    
+    
+    <meta name="twitter:image"
+        content="http://blog.zimbra.md/android-chrome-512x512.png" />
+    
+        <meta name="twitter:description" content="Man pages are awesome. They genuinely are. In any *nix system you can just get documentation on your programs or even some programming things (namely a lot of C" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">SoBo&#39;s Dev Log</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://blog.zimbra.md/pages/about/">
+                About
+            </a></li>
+        
+        
+            <li><a href="/archguide">Arch guide</a></li>
+        
+        
+            <li><a href="/tags">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <a class="nerdlink" onclick="newSearch();">&#xf002;</a>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.com/gabmus">
+    
+    
+        &#xf296;
+    
+    <span>
+        GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.gnome.org/gabmus">
+    
+    
+        &#xf7ab;
+    
+    <span>
+        GNOME GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://youtube.com/TechPillsNet">
+    
+    
+        &#xf16a;
+    
+    <span>
+        YouTube
+    </span>
+</a>
+<a
+    
+        rel="me"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://fosstodon.org/@gabmus">
+    
+    
+        <svg class='pseudofont' xmlns:svg='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16'><path d='M 7.4779094,-1.598624e-6 C 5.5602384,0.0156984 3.7155894,0.2233384 2.6405814,0.7170384 c 0,0 -2.13206093,0.9537 -2.13206093,4.20766 0,0.74512 -0.01448,1.63603 0.0091,2.58084 0.07742,3.1821946 0.58336693,6.3183886 3.52553593,7.0971276 1.356568,0.359063 2.521335,0.434289 3.45936,0.382729 1.701085,-0.09431 2.6560206,-0.607063 2.6560206,-0.607063 l -0.05611,-1.234252 c 0,0 -1.2156316,0.383272 -2.5808476,0.33656 -1.352609,-0.04639 -2.780561,-0.145832 -2.999328,-1.80651 -0.0202,-0.145872 -0.03031,-0.301902 -0.03031,-0.465714 0,-10e-7 1.327834,0.324572 3.010574,0.40167 1.028943,0.0472 1.993827,-0.06028 2.9738766,-0.177218 1.879445,-0.224425 3.515901,-1.382448 3.721577,-2.4405646 0.32407,-1.666815 0.297376,-4.067605 0.297376,-4.067605 0,-3.25396 -2.131943,-4.20766 -2.131943,-4.20766 C 11.288476,0.2233384 9.4426784,0.0156784 7.5250084,-1.598624e-6 Z M 5.3076104,2.5424984 c 0.798781,0 1.403595,0.30701 1.803551,0.92113 l 0.388886,0.65181 0.388884,-0.65181 c 0.399875,-0.61412 1.00469,-0.92113 1.803551,-0.92113 0.6903266,0 1.2465526,0.24267 1.6713186,0.71609 0.411755,0.47342 0.61677,1.11337 0.61677,1.91862 v 3.939988 h -1.560986 v -3.824218 c 0,-0.80613 -0.339166,-1.21531 -1.0176126,-1.21531 -0.750129,0 -1.126049,0.48533 -1.126049,1.44509 v 2.09324 h -1.551753 v -2.09324 c 0,-0.95976 -0.376039,-1.44509 -1.126168,-1.44509 -0.678446,0 -1.017613,0.40918 -1.017613,1.21531 v 3.824218 h -1.560985 v -3.939988 c 0,-0.80525 0.205053,-1.4452 0.616889,-1.91862 0.424685,-0.47342 0.980911,-0.71609 1.671317,-0.71609 z' /></svg>
+    
+    <span>
+        Mastodon
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Man pages with Markdown and Pandoc</h1>
+    
+    
+        <p class="date">
+            <span title='Date'> </span>
+    2020-08-31
+
+</p>
+    
+    
+    
+    
+    <div><p>Man pages are awesome. They genuinely are. In any *nix system you can just get documentation on your programs or even some programming things (namely a lot of C stuff, this was very useful in University) <strong>offline</strong> by just using a tiny simple command.</p>
+<p>Of course writing man pages is a different thing. They are written in <em>groff</em>. I am not a fan of it, although I know people who do enjoy using it.</p>
+<h3 id="markdown--pandoc">Markdown ❤ Pandoc</h3>
+<p>Of course the obvious thing to do is write your docs in <strong>Markdown</strong>, since it&rsquo;s the best simple markup language out there. Fortunately, it&rsquo;s very easy to convert Markdown to groff, and consequently into a man page.</p>
+<p>And of course you can just use <a href="https://pandoc.org/">Pandoc</a> to do that. It&rsquo;s as simple and straight forward as you can imagine, it&rsquo;s just one command away:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pandoc --standalone --to man mymanpage.1.md -o mymanpage.1
+</span></span></code></pre></div><p>It&rsquo;s actually not the first time I&rsquo;ve done something like this. The first was with <a href="https://gitlab.com/gabmus/glorious-man-pages">the handy manuals I wrote for the Glorious GMMK keyboard and Model O mouse</a>. Most of the fancy things you&rsquo;d wanna tweak with these peripherals are done with weird key combinations, and having the paper manuals or even worse PDF copies of those around isn&rsquo;t very practical. So of course I wrote man pages for those.</p>
+<p>If you know Markdown, the syntax you have to use is of course very simple, but if you wanna do it right, you may want to know about a couple of dialect forms of Markdown:</p>
+<h3 id="definition-lists">Definition lists</h3>
+<p><a href="https://pandoc.org/MANUAL.html#definition-lists">Definition lists</a> are perfect for describing particular commands or arguments in your man page, and they get rendered just as you think they would in a man page. They are not part of the original Markdown spec, but Pandoc supports them no problem.</p>
+<p>They&rsquo;re really easy to use, here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#f1fa8c">`-h, --help`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:   Shows the help message
+</span></span></code></pre></div><p>The backticks are optional but they help escaping weird characters and besides they mark a section that is effectively code.</p>
+<h3 id="metadata-blocks">Metadata blocks</h3>
+<p><a href="https://pandoc.org/MANUAL.html#metadata-blocks">Metadata blocks</a> are also useful to show the title of the man page. Definitely one of those small touches that you might want to have in your man page, as every proper one has them.</p>
+<p>Again, the syntax is fairly straight forward. You want to have this at the beginning of your file and looking something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>% mymanual(1) Version 0.9.99 | Example manual for this blog post
+</span></span></code></pre></div><h3 id="example">Example</h3>
+<p>Finally I want to include an example Markdown man page I recently made for <a href="https://hydrapaper.gabmus.org">HydraPaper</a>, so that you can get a better grasp of what a full file could look like. Of course you can also find this file in HydraPaper&rsquo;s repository if you&rsquo;re interested.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>% HydraPaper(1) | General Commands Manual
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NAME
+</span></span><span style="display:flex;"><span>====
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>HydraPaper - Wallpaper manager with multi monitor support
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SYNOPSIS
+</span></span><span style="display:flex;"><span>========
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">`hydrapaper [-h] [-c WALLPAPER_PATH [WALLPAPER_PATH ...]] [-m WALLPAPER_MODES [WALLPAPER_MODES ...]] [-r] [-l]`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DESCRIPTION
+</span></span><span style="display:flex;"><span>===========
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>HydraPaper is a wallpaper manager, specifically designed to work around the lack of functionality of many desktop environments to set a different wallpaper for each monitor in a multi monitor setup. It accomplishes this by scaling and merging different wallpapers into a single one and setting it as spanned.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>It currently supports various desktop environments, including GNOME, MATE, Cinnamon and Budgie. Experimental support is included for the sway window manager.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>OPTIONS
+</span></span><span style="display:flex;"><span>=======
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">`-h, --help`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:   Show the help message and exit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">`-c, --cli WALLPAPER_PATHS...`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:   Set wallpapers from the command line
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">`-m, --modes WALLPAPER_MODES...`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:   Specify the modes for the wallpapers (`zoom`, <span style="color:#f1fa8c">`center_black`</span>, <span style="color:#f1fa8c">`center_blur`</span>, <span style="color:#f1fa8c">`fit_black`</span>, <span style="color:#f1fa8c">`fit_blur`</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">`-r, --random`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:   Set wallpapers randomly
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">`-l, --lockscreen`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:   Set lockscreen wallpapers instead of desktop ones (for supported desktop environments)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>BUGS
+</span></span><span style="display:flex;"><span>====
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Bugs can be reported and filed at https://gitlab.gnome.org/gabmus/hydrapaper/issues
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>If you are not using the flatpak version of HydraPaper, or if you are using an otherwise out of date or downstream version of it, please make sure that the bug you want to report hasn&#39;t been already fixed or otherwise caused by a downstream patch.
+</span></span></code></pre></div></div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/documentation">#documentation</a>
+        
+            <a
+                
+                href="/tags/groff">#groff</a>
+        
+            <a
+                
+                href="/tags/man">#man</a>
+        
+            <a
+                
+                href="/tags/manual">#manual</a>
+        
+            <a
+                
+                href="/tags/markdown">#markdown</a>
+        
+            <a
+                
+                href="/tags/pandoc">#pandoc</a>
+        
+    </p>
+
+
+    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="openFediInstanceDialog();">
+        Share on the Fediverse
+    </a>
+    <div id="fediInstanceDialog">
+        <div class="bg" onclick="closeFediInstanceDialog();"></div>
+        <div class="dialog">
+            <h2>Enter your instance&#39;s address</h2>
+            <input id="fediInstanceInput" placeholder='Eg. mastodon.social' type="text" />
+            <div class="buttons">
+                <a class="shareBtn" onclick="closeFediInstanceDialog();">Cancel</a>
+                <a class="shareBtn" onclick="shareOnFedi();">Share</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var articleTitle = 'Man pages with Markdown and Pandoc';
+        var articleLink = 'http:\/\/blog.zimbra.md\/posts\/man_pages_with_markdown_and_pandoc\/';
+        var fediInstanceDialog = document.getElementById('fediInstanceDialog');
+        var fediInstanceInput = document.getElementById('fediInstanceInput');
+        function openFediInstanceDialog() {
+            fediInstanceDialog.classList.add('open');
+        }
+        function closeFediInstanceDialog() {
+            fediInstanceDialog.classList.remove('open');
+        }
+        function fixURL(url) {
+            if (url.substr(0, 8) == 'https://') return url;
+            if (url.substr(0, 7) == 'http://') return url;
+            return 'https://' + url;
+        }
+        function shareOnFedi() {
+            let instance = fediInstanceInput.value.trim();
+            if (!instance) {
+                return;
+            }
+            instance = fixURL(instance);
+            window.open(
+                `${instance}/share?text=${articleTitle}%20${articleLink}`,
+                '__blank'
+            );
+            closeFediInstanceDialog();
+        }
+    </script>
+
+
+
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+
+<div id="ficurinia-cactus-comments"></div>
+
+<script>
+initComments({
+    node: document.getElementById("ficurinia-cactus-comments"),
+    defaultHomeserverUrl: 'https:\/\/matrix.cactus.chat:8448',
+    serverName: 'cactus.chat',
+    siteName: "fleek.eu.org",
+    commentSectionId: "620a8402636c3ce1d6c5a81a82cb9a13"
+})
+</script>
+
+
+    
+    
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2022 &copy; JekA SoBo - <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

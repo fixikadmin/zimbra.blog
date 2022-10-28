@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webkit2gtk on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/webkit2gtk/</link>
+    <description>Recent content in webkit2gtk on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Sat, 27 Nov 2021 19:08:53 +0100</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/webkit2gtk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Block ads in WebKitGtk</title>
+      <link>http://blog.zimbra.md/posts/block_ads_in_webkitgtk/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/block_ads_in_webkitgtk/</guid>
+      <description>One of the most requested features (and for a good reason) in Feeds has always been ad blocking.
+I never came around to implement it, mostly because I couldn&amp;rsquo;t find a guide or any similar resource, except for GNOME Web&amp;rsquo;s source code, and that&amp;rsquo;s not exactly easy to navigate.</description>
+    </item>
+    
+  </channel>
+</rss>

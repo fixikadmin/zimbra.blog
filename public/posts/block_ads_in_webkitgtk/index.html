@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head>
+    
+        <script>
+            if (location.host != new URL("http:\/\/blog.zimbra.md").host) location.href = "http:\/\/blog.zimbra.md"
+        </script>
+    
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/logo.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Block ads in WebKitGtk  &ndash;
+        
+        SoBo&#39;s Dev Log
+    </title>
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://blog.zimbra.md/css/styles.6f84514ad632600fba315252a38e35f30218f3d5ec268c1236f62782176917002e704c2b142a2d949bd831c6feabc3d6db35a3c6d6e151b839b9fe80cc19fa4f.css integrity="sha512-b4RRStYyYA&#43;6MVJSo4418wIY89XsJowSNvYnghdpFwAucEwrFCotlJvYMcb&#43;q8PW2zWjxtbhUbg5uf6AzBn6Tw==" />
+<meta name="author" content="JekA SoBo" />
+
+    
+        <meta name="keywords" content='adblock, gtk, python, tutorial, webkit, webkit2gtk, webkitgtk, webview' />
+    
+    
+        <meta name="description" content="ested features (and for a good reason) in Feeds has always been ad blocking.
+I never came around to implement it, mostly because I couldn&amp;rsquo;t find a guide or any similar resource, except for GNOME Web&amp;rsquo;s source code, and that&amp;rsquo;s not exactly easy to navigate." />
+    
+
+<meta property="og:site_name"
+    content='SoBo&#39;s Dev Log' />
+
+    <meta property="og:title" content="Block ads in WebKitGtk" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="JekA SoBo" />
+    <meta
+        property="article:published_time"
+        content='2021-11-27T19:08:53Z&#43;0100' />
+    
+        
+            <meta property="article:tag" content="adblock" />
+        
+            <meta property="article:tag" content="gtk" />
+        
+            <meta property="article:tag" content="python" />
+        
+            <meta property="article:tag" content="tutorial" />
+        
+            <meta property="article:tag" content="webkit" />
+        
+            <meta property="article:tag" content="webkit2gtk" />
+        
+            <meta property="article:tag" content="webkitgtk" />
+        
+            <meta property="article:tag" content="webview" />
+        
+    
+    <meta property="og:url" content="http://blog.zimbra.md/posts/block_ads_in_webkitgtk/" />
+    
+    
+        
+            
+        
+    
+    <meta property="og:image"
+        content="http://blog.zimbra.md/images/post_pics/Block_ads_in_WebKitGtk/block_ads_webkit.avif" />
+    
+        <meta property="og:description" content="One of the most requested features (and for a good reason) in Feeds has always been ad blocking.
+I never came around to implement it, mostly because I couldn&amp;rs" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='blog.zimbra.md'
+/>
+<meta property="twitter:url" content="http://blog.zimbra.md/posts/block_ads_in_webkitgtk/" />
+
+
+    <meta name="twitter:title" content="Block ads in WebKitGtk" />
+    
+    
+    
+        
+            
+        
+    
+    <meta name="twitter:image"
+        content="http://blog.zimbra.md/images/post_pics/Block_ads_in_WebKitGtk/block_ads_webkit.avif" />
+    
+        <meta name="twitter:description" content="One of the most requested features (and for a good reason) in Feeds has always been ad blocking.
+I never came around to implement it, mostly because I couldn&amp;rs" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">SoBo&#39;s Dev Log</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://blog.zimbra.md/pages/about/">
+                About
+            </a></li>
+        
+        
+            <li><a href="/archguide">Arch guide</a></li>
+        
+        
+            <li><a href="/tags">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <a class="nerdlink" onclick="newSearch();">&#xf002;</a>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.com/gabmus">
+    
+    
+        &#xf296;
+    
+    <span>
+        GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.gnome.org/gabmus">
+    
+    
+        &#xf7ab;
+    
+    <span>
+        GNOME GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://youtube.com/TechPillsNet">
+    
+    
+        &#xf16a;
+    
+    <span>
+        YouTube
+    </span>
+</a>
+<a
+    
+        rel="me"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://fosstodon.org/@gabmus">
+    
+    
+        <svg class='pseudofont' xmlns:svg='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16'><path d='M 7.4779094,-1.598624e-6 C 5.5602384,0.0156984 3.7155894,0.2233384 2.6405814,0.7170384 c 0,0 -2.13206093,0.9537 -2.13206093,4.20766 0,0.74512 -0.01448,1.63603 0.0091,2.58084 0.07742,3.1821946 0.58336693,6.3183886 3.52553593,7.0971276 1.356568,0.359063 2.521335,0.434289 3.45936,0.382729 1.701085,-0.09431 2.6560206,-0.607063 2.6560206,-0.607063 l -0.05611,-1.234252 c 0,0 -1.2156316,0.383272 -2.5808476,0.33656 -1.352609,-0.04639 -2.780561,-0.145832 -2.999328,-1.80651 -0.0202,-0.145872 -0.03031,-0.301902 -0.03031,-0.465714 0,-10e-7 1.327834,0.324572 3.010574,0.40167 1.028943,0.0472 1.993827,-0.06028 2.9738766,-0.177218 1.879445,-0.224425 3.515901,-1.382448 3.721577,-2.4405646 0.32407,-1.666815 0.297376,-4.067605 0.297376,-4.067605 0,-3.25396 -2.131943,-4.20766 -2.131943,-4.20766 C 11.288476,0.2233384 9.4426784,0.0156784 7.5250084,-1.598624e-6 Z M 5.3076104,2.5424984 c 0.798781,0 1.403595,0.30701 1.803551,0.92113 l 0.388886,0.65181 0.388884,-0.65181 c 0.399875,-0.61412 1.00469,-0.92113 1.803551,-0.92113 0.6903266,0 1.2465526,0.24267 1.6713186,0.71609 0.411755,0.47342 0.61677,1.11337 0.61677,1.91862 v 3.939988 h -1.560986 v -3.824218 c 0,-0.80613 -0.339166,-1.21531 -1.0176126,-1.21531 -0.750129,0 -1.126049,0.48533 -1.126049,1.44509 v 2.09324 h -1.551753 v -2.09324 c 0,-0.95976 -0.376039,-1.44509 -1.126168,-1.44509 -0.678446,0 -1.017613,0.40918 -1.017613,1.21531 v 3.824218 h -1.560985 v -3.939988 c 0,-0.80525 0.205053,-1.4452 0.616889,-1.91862 0.424685,-0.47342 0.980911,-0.71609 1.671317,-0.71609 z' /></svg>
+    
+    <span>
+        Mastodon
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Block ads in WebKitGtk</h1>
+    
+    
+        <p class="date">
+            <span title='Date'> </span>
+    2021-11-27
+
+</p>
+    
+    
+    
+        <figure style="margin: 0">
+            
+                <img src="/images/post_pics/Block_ads_in_WebKitGtk/block_ads_webkit.avif" alt="" />
+            
+            
+        </figure>
+    
+    
+    <div><p>One of the most requested features (and for a good reason) in Feeds has always been ad blocking.</p>
+<p>I never came around to implement it, mostly because I couldn&rsquo;t find a guide or any similar resource, except for <a href="https://gitlab.gnome.org/GNOME/Epiphany">GNOME Web&rsquo;s source code</a>, and that&rsquo;s not exactly easy to navigate. At least, it isn&rsquo;t for me.</p>
+<p>Today I decided to come back to it, and I found that it&rsquo;s actually a rather easy task! That&rsquo;s why I wanted to document this process, in hope that someone might find it useful one day.</p>
+<p>First off, you&rsquo;ll need one or more <strong>blocklists</strong>, in JSON format. I used <a href="https://easylist.to/">EasyList</a>, in particular <a href="https://easylist-downloads.adblockplus.org/easylist_min_content_blocker.json">here&rsquo;s the link to the JSON block list</a>. Blocklists should be updated frequently, so it&rsquo;s advisable to have some sort of mechanism to download and update them at runtime automatically.</p>
+<p>Let&rsquo;s now jump to the code, which will be Python in this case, but hopefully can be easily adapted to other languages.</p>
+<p>I&rsquo;ll use some closures for convenience.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python3" data-lang="python3"><span style="display:flex;"><span><span style="color:#6272a4"># have a function that downloads text</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">download_text</span>(url: <span style="color:#8be9fd;font-style:italic">str</span>) <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd;font-style:italic">str</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># ...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># create the filter store somewhere in your code, ideally you should</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># only have one in your application</span>
+</span></span><span style="display:flex;"><span>my_filter_store <span style="color:#ff79c6">=</span> WebKit2<span style="color:#ff79c6">.</span>UserContentFilterStore<span style="color:#ff79c6">.</span>new(<span style="color:#f1fa8c">&#39;some/cache/path&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># a name that will be used to save/retrieve blocklists from the store</span>
+</span></span><span style="display:flex;"><span>BLOCKLIST_ID <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;blocklist&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">apply_adblock</span>(
+</span></span><span style="display:flex;"><span>        webview: WebKit2<span style="color:#ff79c6">.</span>WebView,
+</span></span><span style="display:flex;"><span>        filter_store: WebKit2<span style="color:#ff79c6">.</span>UserContentFilterStore,
+</span></span><span style="display:flex;"><span>        blocklist_url: <span style="color:#8be9fd;font-style:italic">str</span>
+</span></span><span style="display:flex;"><span>) <span style="color:#ff79c6">-&gt;</span> <span style="color:#ff79c6">None</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 0: Retrieve the WebKit2.UserContentManager from the WebView</span>
+</span></span><span style="display:flex;"><span>    content_manager <span style="color:#ff79c6">=</span> webview<span style="color:#ff79c6">.</span>get_user_content_manager()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">save_blocklist_cb</span>(caller, res, <span style="color:#ff79c6">*</span>args):
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># 6: Once saving is done we can retrieve the newly created</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    WebKit2.UserContentFilter with save_finish and finally add th</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    filter to the WebKit2.UserContentManager</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">filter</span> <span style="color:#ff79c6">=</span> filter_store<span style="color:#ff79c6">.</span>save_finish(res)
+</span></span><span style="display:flex;"><span>            content_manager<span style="color:#ff79c6">.</span>add_filter(<span style="color:#8be9fd;font-style:italic">filter</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> GLib<span style="color:#ff79c6">.</span>Error:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#39;Error saving blocklist&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">download_blocklist_cb</span>(blocklist: <span style="color:#8be9fd;font-style:italic">str</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># 5: Now that we have the blocklist (as a string containing a json),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    we&#39;ll need to convert it to GLib.Bytes, then save it in the store.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    Yes, we need to save it even if we want to refresh it every time,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    this is just the way this works.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    This is also async and when it&#39;s done it will call continue on to</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    save_blocklist_cb</span>
+</span></span><span style="display:flex;"><span>        filter_store<span style="color:#ff79c6">.</span>save(
+</span></span><span style="display:flex;"><span>            BLOCKLIST_ID, GLib<span style="color:#ff79c6">.</span>Bytes<span style="color:#ff79c6">.</span>new(blocklist<span style="color:#ff79c6">.</span>encode()), <span style="color:#ff79c6">None</span>,
+</span></span><span style="display:flex;"><span>            save_blocklist_cb
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">download_blocklist</span>():
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># 4: Download the blocklist and continue on to download_blocklist_cb</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            res <span style="color:#ff79c6">=</span> download_text(blocklist_url)
+</span></span><span style="display:flex;"><span>            GLib<span style="color:#ff79c6">.</span>idle_add(download_blocklist_cb, res)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#39;Error downloading the blocklist&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">filter_load_cb</span>(caller, res, <span style="color:#ff79c6">*</span>args):
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># 2: load_finish will either succeed, and return a</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    WebKit2.UserContentFilter object or raise a GLib.Error in case</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">#    it cannot find the blocklist in the store (ie: on the first run)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">filter</span> <span style="color:#ff79c6">=</span> filter_store<span style="color:#ff79c6">.</span>load_finish(res)
+</span></span><span style="display:flex;"><span>            content_manager<span style="color:#ff79c6">.</span>add_filter(<span style="color:#8be9fd;font-style:italic">filter</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> GLib<span style="color:#ff79c6">.</span>Error:
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># 3: If loading the blocklist from the store fails, download the</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">#    blocklist (async to avoid blocking of course) and save it</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#39;blocklist store not found, downloading...&#39;</span>)
+</span></span><span style="display:flex;"><span>            Thread(target<span style="color:#ff79c6">=</span>download_blocklist, daemon<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>)<span style="color:#ff79c6">.</span>start()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 1: try to load the blocklist from the store, this is async and will call</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">#    filter_load_cb when it&#39;s done</span>
+</span></span><span style="display:flex;"><span>    filter_store<span style="color:#ff79c6">.</span>load(BLOCKLIST_ID, <span style="color:#ff79c6">None</span>, filter_load_cb, <span style="color:#ff79c6">None</span>)
+</span></span></code></pre></div><p>I decided to comment the example code above instead of writing disconnected descriptions here, hopefully it makes sense.</p>
+<p>This said, if you want to look at the actual code that I&rsquo;m using in Feeds, <a href="https://gitlab.gnome.org/World/gfeeds/-/blob/0a3d3da66d7d4ede155db24fb0f83f03b47f5489/gfeeds/webview.py#L78">you can find it here</a> (this is a snapshot to today&rsquo;s current latest commit, in the future you may want to look at newer code). It contains some logic to automatically refresh or even remove the blocklist.</p>
+<p>Let me know what you think in the comments, and feel free to point out any errors, or if something is unclear.</p>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/adblock">#adblock</a>
+        
+            <a
+                
+                href="/tags/gtk">#gtk</a>
+        
+            <a
+                
+                href="/tags/python">#python</a>
+        
+            <a
+                
+                href="/tags/tutorial">#tutorial</a>
+        
+            <a
+                
+                href="/tags/webkit">#webkit</a>
+        
+            <a
+                
+                href="/tags/webkit2gtk">#webkit2gtk</a>
+        
+            <a
+                
+                href="/tags/webkitgtk">#webkitgtk</a>
+        
+            <a
+                
+                href="/tags/webview">#webview</a>
+        
+    </p>
+
+
+    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="openFediInstanceDialog();">
+        Share on the Fediverse
+    </a>
+    <div id="fediInstanceDialog">
+        <div class="bg" onclick="closeFediInstanceDialog();"></div>
+        <div class="dialog">
+            <h2>Enter your instance&#39;s address</h2>
+            <input id="fediInstanceInput" placeholder='Eg. mastodon.social' type="text" />
+            <div class="buttons">
+                <a class="shareBtn" onclick="closeFediInstanceDialog();">Cancel</a>
+                <a class="shareBtn" onclick="shareOnFedi();">Share</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var articleTitle = 'Block ads in WebKitGtk';
+        var articleLink = 'http:\/\/blog.zimbra.md\/posts\/block_ads_in_webkitgtk\/';
+        var fediInstanceDialog = document.getElementById('fediInstanceDialog');
+        var fediInstanceInput = document.getElementById('fediInstanceInput');
+        function openFediInstanceDialog() {
+            fediInstanceDialog.classList.add('open');
+        }
+        function closeFediInstanceDialog() {
+            fediInstanceDialog.classList.remove('open');
+        }
+        function fixURL(url) {
+            if (url.substr(0, 8) == 'https://') return url;
+            if (url.substr(0, 7) == 'http://') return url;
+            return 'https://' + url;
+        }
+        function shareOnFedi() {
+            let instance = fediInstanceInput.value.trim();
+            if (!instance) {
+                return;
+            }
+            instance = fixURL(instance);
+            window.open(
+                `${instance}/share?text=${articleTitle}%20${articleLink}`,
+                '__blank'
+            );
+            closeFediInstanceDialog();
+        }
+    </script>
+
+
+
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+
+<div id="ficurinia-cactus-comments"></div>
+
+<script>
+initComments({
+    node: document.getElementById("ficurinia-cactus-comments"),
+    defaultHomeserverUrl: 'https:\/\/matrix.cactus.chat:8448',
+    serverName: 'cactus.chat',
+    siteName: "fleek.eu.org",
+    commentSectionId: "8082b608ff532414374d228079fc3d22"
+})
+</script>
+
+
+    
+    
+        
+        <div class="relatedArticlesContainer">
+            <hr />
+            <h2>More posts like this</h2>
+            <div class="postlist ">
+                <article class="card postlistitem">
+    <div>
+        <h2>
+            <a href="http://blog.zimbra.md/posts/swatch_a_color_palette_manager/">Swatch: a color palette manager</a>
+        </h2>
+        <p class="date">
+            <span title='Date'> </span>
+    2022-02-14
+
+
+                | 
+                <span title='Tags'> </span>
+                
+                    <a href="/tags/app">#app</a>
+                
+                    <a href="/tags/blueprint">#blueprint</a>
+                
+                    <a href="/tags/color">#color</a>
+                
+                    <a href="/tags/gtk">#gtk</a>
+                
+                    <a href="/tags/gtk4">#gtk4</a>
+                
+                    <a href="/tags/libadwaita">#libadwaita</a>
+                
+                    <a href="/tags/swatch">#swatch</a>
+                
+            
+        </p>
+        
+            
+                <a class="unstyledLink" href="http://blog.zimbra.md/posts/swatch_a_color_palette_manager/">
+                    
+                        <img src="/images/post_pics/Swatch_a_color_palette_manager/scrot0.png" alt="" />
+                    
+                </a>
+            
+        
+        
+            <div class="articlePreview">
+                <p>
+                    
+                        Between one thing and the other, I found myself in need for a palette manager: something to let me categorize different palettes and easily pick and name colors depending on their use.
+                    
+                </p>
+                <p><a href="http://blog.zimbra.md/posts/swatch_a_color_palette_manager/">Continue reading </a></p>
+            </div>
+        
+    </div>
+    <hr />
+</article>
+<article class="card postlistitem">
+    <div>
+        <h2>
+            <a href="http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/">Gtk4, LibAdwaita and the new Feeds</a>
+        </h2>
+        <p class="date">
+            <span title='Date'> </span>
+    2021-11-21
+
+
+                | 
+                <span title='Tags'> </span>
+                
+                    <a href="/tags/cpp">#cpp</a>
+                
+                    <a href="/tags/feeds">#feeds</a>
+                
+                    <a href="/tags/giara">#giara</a>
+                
+                    <a href="/tags/gtk">#gtk</a>
+                
+                    <a href="/tags/gtk4">#gtk4</a>
+                
+                    <a href="/tags/hydrapaper">#hydrapaper</a>
+                
+                    <a href="/tags/libadwaita">#libadwaita</a>
+                
+                    <a href="/tags/whatip">#whatip</a>
+                
+            
+        </p>
+        
+            
+                <a class="unstyledLink" href="http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/">
+                    
+                        <img src="/images/post_pics/Gtk4_LibAdwaita_and_the_new_Feeds/feeds.avif" alt="" />
+                    
+                </a>
+            
+        
+        
+            <div class="articlePreview">
+                <p>
+                    
+                        So, something big is coming for my news reader app Feeds.
+Most of this year, as far as personal projects go, I spent at close contact with Gtk4, libadwaita and the awesome people over at the various matrix chat rooms.
+                    
+                </p>
+                <p><a href="http://blog.zimbra.md/posts/gtk4_libadwaita_and_the_new_feeds/">Continue reading </a></p>
+            </div>
+        
+    </div>
+    <hr />
+</article>
+
+            </div>
+        </div>
+    
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2022 &copy; JekA SoBo - <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

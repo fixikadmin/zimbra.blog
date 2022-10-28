@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/</link>
+    <description>Recent content in Tags on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Mon, 14 Feb 2022 11:31:20 +0100</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>app</title>
+      <link>http://blog.zimbra.md/tags/app/</link>
+      <pubDate>Mon, 14 Feb 2022 11:31:20 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blueprint</title>
+      <link>http://blog.zimbra.md/tags/blueprint/</link>
+      <pubDate>Mon, 14 Feb 2022 11:31:20 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/blueprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>color</title>
+      <link>http://blog.zimbra.md/tags/color/</link>
+      <pubDate>Mon, 14 Feb 2022 11:31:20 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/color/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gtk</title>
+      <link>http://blog.zimbra.md/tags/gtk/</link>
+      <pubDate>Mon, 14 Feb 2022 11:31:20 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/gtk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gtk4</title>
+      <link>http://blog.zimbra.md/tags/gtk4/</link>
+      <pubDate>Mon, 14 Feb 2022 11:31:20 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/gtk4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>libadwaita</title>
+      <link>http://blog.zimbra.md/tags/libadwaita/</link>
+      <pubDate>Mon, 14 Feb 2022 11:31:20 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/libadwaita/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swatch</title>
+      <link>http://blog.zimbra.md/tags/swatch/</link>
+      <pubDate>Mon, 14 Feb 2022 11:31:20 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/swatch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>adblock</title>
+      <link>http://blog.zimbra.md/tags/adblock/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/adblock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://blog.zimbra.md/tags/python/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>http://blog.zimbra.md/tags/tutorial/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webkit</title>
+      <link>http://blog.zimbra.md/tags/webkit/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/webkit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webkit2gtk</title>
+      <link>http://blog.zimbra.md/tags/webkit2gtk/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/webkit2gtk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webkitgtk</title>
+      <link>http://blog.zimbra.md/tags/webkitgtk/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/webkitgtk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webview</title>
+      <link>http://blog.zimbra.md/tags/webview/</link>
+      <pubDate>Sat, 27 Nov 2021 19:08:53 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/webview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cpp</title>
+      <link>http://blog.zimbra.md/tags/cpp/</link>
+      <pubDate>Sun, 21 Nov 2021 11:52:10 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feeds</title>
+      <link>http://blog.zimbra.md/tags/feeds/</link>
+      <pubDate>Sun, 21 Nov 2021 11:52:10 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/feeds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>giara</title>
+      <link>http://blog.zimbra.md/tags/giara/</link>
+      <pubDate>Sun, 21 Nov 2021 11:52:10 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/giara/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hydrapaper</title>
+      <link>http://blog.zimbra.md/tags/hydrapaper/</link>
+      <pubDate>Sun, 21 Nov 2021 11:52:10 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/hydrapaper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>whatip</title>
+      <link>http://blog.zimbra.md/tags/whatip/</link>
+      <pubDate>Sun, 21 Nov 2021 11:52:10 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/whatip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>http://blog.zimbra.md/tags/blog/</link>
+      <pubDate>Wed, 16 Jun 2021 10:24:30 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comments</title>
+      <link>http://blog.zimbra.md/tags/comments/</link>
+      <pubDate>Wed, 16 Jun 2021 10:24:30 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/comments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meta</title>
+      <link>http://blog.zimbra.md/tags/meta/</link>
+      <pubDate>Wed, 16 Jun 2021 10:24:30 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>electronics</title>
+      <link>http://blog.zimbra.md/tags/electronics/</link>
+      <pubDate>Tue, 09 Mar 2021 13:14:27 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/electronics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberrypi pico</title>
+      <link>http://blog.zimbra.md/tags/raspberrypi-pico/</link>
+      <pubDate>Tue, 09 Mar 2021 13:14:27 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/raspberrypi-pico/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>http://blog.zimbra.md/tags/terminal/</link>
+      <pubDate>Tue, 09 Mar 2021 13:14:27 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dbus</title>
+      <link>http://blog.zimbra.md/tags/dbus/</link>
+      <pubDate>Sat, 02 Jan 2021 09:42:43 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/dbus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flatpak</title>
+      <link>http://blog.zimbra.md/tags/flatpak/</link>
+      <pubDate>Sat, 02 Jan 2021 09:42:43 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/flatpak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gnome</title>
+      <link>http://blog.zimbra.md/tags/gnome/</link>
+      <pubDate>Sat, 02 Jan 2021 09:42:43 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/gnome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meson</title>
+      <link>http://blog.zimbra.md/tags/meson/</link>
+      <pubDate>Sat, 02 Jan 2021 09:42:43 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/meson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://blog.zimbra.md/tags/linux/</link>
+      <pubDate>Fri, 30 Oct 2020 09:55:23 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reddit</title>
+      <link>http://blog.zimbra.md/tags/reddit/</link>
+      <pubDate>Fri, 30 Oct 2020 09:55:23 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/reddit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>world</title>
+      <link>http://blog.zimbra.md/tags/world/</link>
+      <pubDate>Fri, 30 Oct 2020 09:55:23 +0100</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/world/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>button</title>
+      <link>http://blog.zimbra.md/tags/button/</link>
+      <pubDate>Thu, 08 Oct 2020 11:39:57 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/button/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eventhandler</title>
+      <link>http://blog.zimbra.md/tags/eventhandler/</link>
+      <pubDate>Thu, 08 Oct 2020 11:39:57 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/eventhandler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gtk3</title>
+      <link>http://blog.zimbra.md/tags/gtk3/</link>
+      <pubDate>Thu, 08 Oct 2020 11:39:57 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/gtk3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mouse</title>
+      <link>http://blog.zimbra.md/tags/mouse/</link>
+      <pubDate>Thu, 08 Oct 2020 11:39:57 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/mouse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>area</title>
+      <link>http://blog.zimbra.md/tags/area/</link>
+      <pubDate>Sat, 03 Oct 2020 10:23:54 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/area/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cairo</title>
+      <link>http://blog.zimbra.md/tags/cairo/</link>
+      <pubDate>Sat, 03 Oct 2020 10:23:54 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/cairo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drawing</title>
+      <link>http://blog.zimbra.md/tags/drawing/</link>
+      <pubDate>Sat, 03 Oct 2020 10:23:54 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/drawing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gtkdrawingarea</title>
+      <link>http://blog.zimbra.md/tags/gtkdrawingarea/</link>
+      <pubDate>Sat, 03 Oct 2020 10:23:54 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/gtkdrawingarea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pixbuf</title>
+      <link>http://blog.zimbra.md/tags/pixbuf/</link>
+      <pubDate>Sat, 03 Oct 2020 10:23:54 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/pixbuf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>http://blog.zimbra.md/tags/documentation/</link>
+      <pubDate>Mon, 31 Aug 2020 19:49:06 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>groff</title>
+      <link>http://blog.zimbra.md/tags/groff/</link>
+      <pubDate>Mon, 31 Aug 2020 19:49:06 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/groff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>man</title>
+      <link>http://blog.zimbra.md/tags/man/</link>
+      <pubDate>Mon, 31 Aug 2020 19:49:06 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/man/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>manual</title>
+      <link>http://blog.zimbra.md/tags/manual/</link>
+      <pubDate>Mon, 31 Aug 2020 19:49:06 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/manual/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>http://blog.zimbra.md/tags/markdown/</link>
+      <pubDate>Mon, 31 Aug 2020 19:49:06 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pandoc</title>
+      <link>http://blog.zimbra.md/tags/pandoc/</link>
+      <pubDate>Mon, 31 Aug 2020 19:49:06 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/pandoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://blog.zimbra.md/tags/hugo/</link>
+      <pubDate>Mon, 24 Aug 2020 09:19:02 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>http://blog.zimbra.md/tags/website/</link>
+      <pubDate>Mon, 24 Aug 2020 09:19:02 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ninja</title>
+      <link>http://blog.zimbra.md/tags/ninja/</link>
+      <pubDate>Mon, 11 May 2020 11:27:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/ninja/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>http://blog.zimbra.md/tags/test/</link>
+      <pubDate>Mon, 11 May 2020 11:27:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>http://blog.zimbra.md/tags/testing/</link>
+      <pubDate>Mon, 11 May 2020 11:27:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unit</title>
+      <link>http://blog.zimbra.md/tags/unit/</link>
+      <pubDate>Mon, 11 May 2020 11:27:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/unit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unittest</title>
+      <link>http://blog.zimbra.md/tags/unittest/</link>
+      <pubDate>Mon, 11 May 2020 11:27:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/unittest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>http://blog.zimbra.md/tags/design/</link>
+      <pubDate>Wed, 11 Sep 2019 12:03:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>purism</title>
+      <link>http://blog.zimbra.md/tags/purism/</link>
+      <pubDate>Wed, 11 Sep 2019 12:03:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/purism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>update</title>
+      <link>http://blog.zimbra.md/tags/update/</link>
+      <pubDate>Wed, 11 Sep 2019 12:03:41 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cd</title>
+      <link>http://blog.zimbra.md/tags/cd/</link>
+      <pubDate>Sat, 31 Aug 2019 12:24:16 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/cd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ci</title>
+      <link>http://blog.zimbra.md/tags/ci/</link>
+      <pubDate>Sat, 31 Aug 2019 12:24:16 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitlab</title>
+      <link>http://blog.zimbra.md/tags/gitlab/</link>
+      <pubDate>Sat, 31 Aug 2019 12:24:16 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yml</title>
+      <link>http://blog.zimbra.md/tags/yml/</link>
+      <pubDate>Sat, 31 Aug 2019 12:24:16 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/yml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>amdgpu</title>
+      <link>http://blog.zimbra.md/tags/amdgpu/</link>
+      <pubDate>Sat, 31 Aug 2019 09:04:26 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/amdgpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arch</title>
+      <link>http://blog.zimbra.md/tags/arch/</link>
+      <pubDate>Sat, 31 Aug 2019 09:04:26 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gpu</title>
+      <link>http://blog.zimbra.md/tags/gpu/</link>
+      <pubDate>Sat, 31 Aug 2019 09:04:26 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/gpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mesa</title>
+      <link>http://blog.zimbra.md/tags/mesa/</link>
+      <pubDate>Sat, 31 Aug 2019 09:04:26 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/mesa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>radeon</title>
+      <link>http://blog.zimbra.md/tags/radeon/</link>
+      <pubDate>Sat, 31 Aug 2019 09:04:26 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/radeon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vulkan</title>
+      <link>http://blog.zimbra.md/tags/vulkan/</link>
+      <pubDate>Sat, 31 Aug 2019 09:04:26 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/vulkan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>roadmap</title>
+      <link>http://blog.zimbra.md/tags/roadmap/</link>
+      <pubDate>Fri, 23 Aug 2019 11:51:36 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/roadmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>analytics</title>
+      <link>http://blog.zimbra.md/tags/analytics/</link>
+      <pubDate>Wed, 14 Aug 2019 19:40:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>commento</title>
+      <link>http://blog.zimbra.md/tags/commento/</link>
+      <pubDate>Wed, 14 Aug 2019 19:40:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/commento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>http://blog.zimbra.md/tags/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zimbra</title>
+      <link>http://blog.zimbra.md/tags/zimbra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/tags/zimbra/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

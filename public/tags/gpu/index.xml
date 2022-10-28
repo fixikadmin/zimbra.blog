@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gpu on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/gpu/</link>
+    <description>Recent content in gpu on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Sat, 31 Aug 2019 09:04:26 +0000</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Early adopter experience with the new Radeon RX 5700XT on Arch Linux</title>
+      <link>http://blog.zimbra.md/posts/early-adopter-experience-with-the-new-radeon-rx-5700-xt-on-arch-linux/</link>
+      <pubDate>Sat, 31 Aug 2019 09:04:26 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/early-adopter-experience-with-the-new-radeon-rx-5700-xt-on-arch-linux/</guid>
+      <description>So I recently got myself a shiny new AMD Radeon RX 5700 XT GPU (that&amp;rsquo;s a mouthful).
+Let&amp;rsquo;s see how it does on Linux.
+Installation First, I use Arch (btw) and that makes things a lot easier, at least for now.</description>
+    </item>
+    
+  </channel>
+</rss>

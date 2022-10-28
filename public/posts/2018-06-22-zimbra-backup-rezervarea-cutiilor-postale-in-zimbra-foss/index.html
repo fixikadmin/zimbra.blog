@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head>
+    
+        <script>
+            if (location.host != new URL("http:\/\/fleek.eu.org:1313").host) location.href = "http:\/\/fleek.eu.org:1313"
+        </script>
+    
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/logo.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+        GabMus&#39;s Dev Log
+    </title>
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://fleek.eu.org:1313/css/styles.6f84514ad632600fba315252a38e35f30218f3d5ec268c1236f62782176917002e704c2b142a2d949bd831c6feabc3d6db35a3c6d6e151b839b9fe80cc19fa4f.css integrity="sha512-b4RRStYyYA&#43;6MVJSo4418wIY89XsJowSNvYnghdpFwAucEwrFCotlJvYMcb&#43;q8PW2zWjxtbhUbg5uf6AzBn6Tw==" />
+<meta name="author" content="Gabriele Musco" />
+
+    
+    
+        <meta name="description" content=" - rezervarea cutiilor postale in Zimbra FOSS Slug: zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss Date: 2018-06-22 09:19:47 Tags: Category: Zimbra Lang: en Translate: true Summary:
+Cerinte fata de sistemul de back-up Zimbra FOSS: Solutie Open Source" />
+    
+
+<meta property="og:site_name"
+    content='GabMus&#39;s Dev Log' />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="Gabriele Musco" />
+    <meta
+        property="article:published_time"
+        content='0001-01-01T00:00:00Z&#43;0000' />
+    
+    <meta property="og:url" content="http://fleek.eu.org:1313/posts/2018-06-22-zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss/" />
+    
+    
+    <meta property="og:image"
+        content="http://fleek.eu.org:1313/android-chrome-512x512.png" />
+    
+        <meta property="og:description" content="Title: Zimbra Backup - rezervarea cutiilor postale in Zimbra FOSS Slug: zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss Date: 2018-06-22 09:19:47 Tags:" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='fleek.eu.org:1313'
+/>
+<meta property="twitter:url" content="http://fleek.eu.org:1313/posts/2018-06-22-zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss/" />
+
+
+    <meta name="twitter:title" content="" />
+    
+    
+    
+    <meta name="twitter:image"
+        content="http://fleek.eu.org:1313/android-chrome-512x512.png" />
+    
+        <meta name="twitter:description" content="Title: Zimbra Backup - rezervarea cutiilor postale in Zimbra FOSS Slug: zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss Date: 2018-06-22 09:19:47 Tags:" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">GabMus&#39;s Dev Log</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://fleek.eu.org:1313/pages/about/">
+                About
+            </a></li>
+        
+        
+            <li><a href="/archguide">Arch guide</a></li>
+        
+        
+            <li><a href="/tags">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <a class="nerdlink" onclick="newSearch();">&#xf002;</a>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.com/gabmus">
+    
+    
+        &#xf296;
+    
+    <span>
+        GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.gnome.org/gabmus">
+    
+    
+        &#xf7ab;
+    
+    <span>
+        GNOME GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://youtube.com/TechPillsNet">
+    
+    
+        &#xf16a;
+    
+    <span>
+        YouTube
+    </span>
+</a>
+<a
+    
+        rel="me"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://fosstodon.org/@gabmus">
+    
+    
+        <svg class='pseudofont' xmlns:svg='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16'><path d='M 7.4779094,-1.598624e-6 C 5.5602384,0.0156984 3.7155894,0.2233384 2.6405814,0.7170384 c 0,0 -2.13206093,0.9537 -2.13206093,4.20766 0,0.74512 -0.01448,1.63603 0.0091,2.58084 0.07742,3.1821946 0.58336693,6.3183886 3.52553593,7.0971276 1.356568,0.359063 2.521335,0.434289 3.45936,0.382729 1.701085,-0.09431 2.6560206,-0.607063 2.6560206,-0.607063 l -0.05611,-1.234252 c 0,0 -1.2156316,0.383272 -2.5808476,0.33656 -1.352609,-0.04639 -2.780561,-0.145832 -2.999328,-1.80651 -0.0202,-0.145872 -0.03031,-0.301902 -0.03031,-0.465714 0,-10e-7 1.327834,0.324572 3.010574,0.40167 1.028943,0.0472 1.993827,-0.06028 2.9738766,-0.177218 1.879445,-0.224425 3.515901,-1.382448 3.721577,-2.4405646 0.32407,-1.666815 0.297376,-4.067605 0.297376,-4.067605 0,-3.25396 -2.131943,-4.20766 -2.131943,-4.20766 C 11.288476,0.2233384 9.4426784,0.0156784 7.5250084,-1.598624e-6 Z M 5.3076104,2.5424984 c 0.798781,0 1.403595,0.30701 1.803551,0.92113 l 0.388886,0.65181 0.388884,-0.65181 c 0.399875,-0.61412 1.00469,-0.92113 1.803551,-0.92113 0.6903266,0 1.2465526,0.24267 1.6713186,0.71609 0.411755,0.47342 0.61677,1.11337 0.61677,1.91862 v 3.939988 h -1.560986 v -3.824218 c 0,-0.80613 -0.339166,-1.21531 -1.0176126,-1.21531 -0.750129,0 -1.126049,0.48533 -1.126049,1.44509 v 2.09324 h -1.551753 v -2.09324 c 0,-0.95976 -0.376039,-1.44509 -1.126168,-1.44509 -0.678446,0 -1.017613,0.40918 -1.017613,1.21531 v 3.824218 h -1.560985 v -3.939988 c 0,-0.80525 0.205053,-1.4452 0.616889,-1.91862 0.424685,-0.47342 0.980911,-0.71609 1.671317,-0.71609 z' /></svg>
+    
+    <span>
+        Mastodon
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1></h1>
+    
+    
+        <p class="date">
+            <span title='Date'> </span>
+    0001-01-01
+
+</p>
+    
+    
+    
+    
+    <div><p>Title: Zimbra Backup - rezervarea cutiilor postale in Zimbra FOSS
+Slug: zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss
+Date: 2018-06-22 09:19:47
+Tags:
+Category: Zimbra
+Lang: en
+Translate: true
+Summary:</p>
+<h3 id="cerinte-fata-de-sistemul-de-back-up-zimbra-foss">Cerinte fata de sistemul de back-up Zimbra FOSS:</h3>
+<ol>
+<li>
+<p>Solutie Open Source</p>
+</li>
+<li>
+<p>Crearea copiilor de rezerva diferentiale.</p>
+</li>
+<li>
+<p>Restabilirea mesajelor la cerere. (cu revenire la punctele de backup, Anual, Lunar, Saptamanal, Zilnic)</p>
+</li>
+<li>
+<p>Restabilirea dintr-un cont in altul.</p>
+</li>
+<li>
+<p>Restabilirea contului  in cazul ca a fost eliminat.</p>
+</li>
+<li>
+<p>Spatiul minimal pe storage.</p>
+</li>
+</ol>
+<h3 id="limitari--ale-sistemului-de-backup">Limitari  ale sistemului de backup:</h3>
+<ol>
+<li>
+<p>Nu va fi posibila restabilirea mesajelor care nu sunt acoperite de punctele de backup</p>
+</li>
+<li>
+<p>In scopul economisirii spatiului fisierele de back-up premergatoare for fi eliminate ( )</p>
+</li>
+</ol>
+<h3 id="solutii-gasite">Solutii gasite:</h3>
+<ol>
+<li>
+<p>ZMBKPOSE (Zimbra Backup Open Source Edition)</p>
+</li>
+<li>
+<p>DAR</p>
+</li>
+<li>
+<p>Cloud Snapshot</p>
+</li>
+</ol>
+<p>Solutia de backup care corespunde cerintelor este ZMBKPOSE (Branch: rewrite_proposal_v2.0).</p>
+<p>Site-ul proiectului: <a href="https://github.com/bggo/Zmbkpose">https://github.com/bggo/Zmbkpose</a></p>
+<p>Link-ul de download: <a href="http://github.com/bggo/Zmbkpose/archive/rewrite_proposal_v2.0.zip">http://github.com/bggo/Zmbkpose/archive/rewrite_proposal_v2.0.zip</a></p>
+<h3 id="estimari-rata-de-compresie-spatiu-necesar">Estimari (rata de compresie, spatiu necesar):</h3>
+<ol>
+<li>Spatiu estimativ pe Storage care va fi necesar:</li>
+</ol>
+<p>Dupa testarea solutiei pentru cateva cutii postale , a fost determinat ca 2.43 GB  dupa  efectuarea copiei de rezerva a fost obtinut 1.3GB ,
+respectiv obtinem o rata de 53% . Solutia ZMBKPOSE utilizeaza compresia GZIP+TAR, in documentatia oficiala rata de compresie este in limita 21-26%.
+Rezultatul din exemplu arata ca in copia de rezerva sunt prezente alte arhive care nu vor fi compresate.</p>
+<ol start="2">
+<li>Timpul de compresie</li>
+</ol>
+<p>Acest parametru depinde de mai multi factori: specificatia hardware, incarcarea sistemului (LA),
+2.43	GB  au fost arhivate in 360s</p>
+<ol start="3">
+<li>Mai jos este prezentat graficul de utilizare al CPU la arhivarea unui volum mai mare , cca 18GB</li>
+</ol>
+<p>Estimativ volumul total al mailbox-urilor de pe serverul meu este de cca. 195GB, care  va fi compresat in 103GB timp de 6 ore si 20 min.</p>
+<p>Real volumul de 195 GB  a fost compresat in 158G si a durat 7 ore (de la ora 9 pina la 16, cu intreruperi)</p>
+<h3 id="continuitatea-serviciului-de-rezervare---cron">Continuitatea serviciului de rezervare - CRON</h3>
+<p>Crontab-ul pentru crearea copiilor de rezerva pentru toate conturile e-mail</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SHELL=/bin/bash
+</span></span><span style="display:flex;"><span>PATH=/sbin:/bin:/usr/sbin:/usr/bin
+</span></span><span style="display:flex;"><span>MAILTO=root
+</span></span><span style="display:flex;"><span>HOME=/tmp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>##FULL BACKUPS every day for 400 accounts(-c 400), or for 6 hours(-C 6h)
+</span></span><span style="display:flex;"><span>#  whichever comes first, only if last full backup has more than 20 days 
+</span></span><span style="display:flex;"><span>#  old(-F 20d). 
+</span></span><span style="display:flex;"><span># Pause of 5 seconds between accounts backups( -e 5s)
+</span></span><span style="display:flex;"><span>0 0 * * * zimbra LOG_TYPE=full_bk /usr/local/bin/zmbkpose.wrapper -F 20d -C 6h -c 400 -e 5s
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>##INCREMENTAL BACKUPS every day for 3 hours(-C 3h), only if last incremental backup 
+</span></span><span style="display:flex;"><span># has more than 30hs old(-I 30h). 
+</span></span><span style="display:flex;"><span># Perform a full backup is not has previous incremental (-t)
+</span></span><span style="display:flex;"><span># Pause of 5 seconds betwee accounts backups (-e 5s)
+</span></span><span style="display:flex;"><span>0 6  * * * zimbra LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s
+</span></span><span style="display:flex;"><span>0 9  * * * zimbra LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s
+</span></span><span style="display:flex;"><span>0 18 * * * zimbra LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s
+</span></span><span style="display:flex;"><span>0 21 * * * zimbra LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#Remove old backups
+</span></span><span style="display:flex;"><span>#Delete cycles off backups older than 15 days(-d 15d). A cycle is a full backups
+</span></span><span style="display:flex;"><span>#  and its subsequent incremental backups. 
+</span></span><span style="display:flex;"><span># zmbkpose will not eliminate backups leaving incomplete cycles
+</span></span><span style="display:flex;"><span>0 2 * * *  zimbra LOG_TYPE=del_bk /usr/local/bin/zmbkpose.wrapper -d 15d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#Remove old logs files
+</span></span><span style="display:flex;"><span>0 22 * * * zimbra find /var/log/zmbkpose -type f -mtime +30 -exec rm -f &#39;{}&#39; \;
+</span></span></code></pre></div><p>Explicatie:</p>
+<ol>
+<li>BACKUP FULL in fiecare zi pentru 400 de conturi (-c 400) sau timp de 6 ore (-6h) care apare mai intai, numai daca ultima copie de rezerva completa are mai mult de 20 de zile (Vechime 20 zile (-F 20d). Pauza de 5 secunde intre copii de rezerva ale conturilor (-e 5s) )</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>0 0 * * * zimbra LOG_TYPE=full_bk /usr/local/bin/zmbkpose.wrapper -F 20d -C 6h -c 400 -e 5s
+</span></span></code></pre></div><ol start="2">
+<li>BACKUP INCREMENTAL in fiecare zi timp in fiecare  3 ore (-C 3h), numai in cazul in care ultimul backup incremental are mai mult de 30 de ore vechime (-I 30h).Efectuiaza o copie de rezerva completa in caz ca nu are precedent incremental (-t)</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Pauza de 5 secunde intre fie copie de backup (-e 5s)
+</span></span><span style="display:flex;"><span>0 6  * * * zimbra LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s
+</span></span><span style="display:flex;"><span>0 9  * * * zimbra LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s
+</span></span><span style="display:flex;"><span>0 18 * * * zimbra LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s
+</span></span><span style="display:flex;"><span>0 21 * * * zimbra LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s
+</span></span></code></pre></div><ol start="3">
+<li>ELIMINARE BACKUP Elimina backup-urile mai vechi de 15 zile (-d 15d). Un ciclu este un backup complet si backup-urile ulterioare incrementale. Zmbkpose nu va elimina backup-urile care lasa cicluri incomplete</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>0 2 * * *  zimbra LOG_TYPE=del_bk /usr/local/bin/zmbkpose.wrapper -d 15d
+</span></span></code></pre></div><p>####Termeni:</p>
+<ol>
+<li>Backup Full</li>
+<li>Backup Full Conditionat</li>
+<li>Backup Incremental</li>
+<li>Backup Incremental Conditionat</li>
+<li>Ciclu de Backup</li>
+</ol>
+<p>Ciclul de backup  reprezinta  un backup FULL(total) si subsecventele de backup INC(incremental). Ciclul complet trebuie sa fie intre data de &ldquo;prezent&rdquo;
+argumentul &ldquo;-d&rdquo;  de exemplu:
+Ziua | Backup</p>
+<p>1 FULL
+2 INC
+3 INC
+4 INC
+5 FULL
+6 INC
+7 FULL
+8 FULL</p>
+<p>In exemplul de mai sus avem 2 cicluri (1 ciclu  ziua 1-5, 2 ciclu  ziua  5-7  )</p>
+<p>Atunci cand in ziua a 9-a executam zmbkpose cu cheile:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>-d 2d =&gt; backup-urile pentru zilele 1,2,3,4,5,6 vor fi eliminate deoarece ele sunt create mai devreme de 7 zile (9 - 2 = 7)
+</span></span><span style="display:flex;"><span>-d 4d =&gt; backup-urile pentru zilele 1,2,3,4 vor fi eliminate deoarece ele sunt create mai devreme de 5 zile  (9 - 4 = 5)
+</span></span><span style="display:flex;"><span>-d 5d =&gt; nu va fi eliminate nici un fisier de backup deoarece  aceasta va duce intreruperea ciclului de  la 1 la 4
+</span></span></code></pre></div><p>###Comenzi utile:</p>
+<ol>
+<li>Listarea backup-urilor</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>su - zimbra -c &#39;/usr/local/bin/zmbkpose -l -a user@example.md&#39;
+</span></span></code></pre></div><p>Rezultat:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>user@example.md &#34;09/06/2017 17:09:19&#34; FULL 1G
+</span></span><span style="display:flex;"><span>user@example.md &#34;12/06/2017 10:21:07&#34; INC 1M
+</span></span><span style="display:flex;"><span>user@example.md &#34;13/06/2017 09:09:33&#34; INC 650K
+</span></span><span style="display:flex;"><span>user@example.md &#34;03/08/2017 16:18:00&#34; INC 25M
+</span></span><span style="display:flex;"><span>user@example.md &#34;29/08/2017 15:22:15&#34; FULL 1G
+</span></span><span style="display:flex;"><span>user@example.md &#34;29/08/2017 16:50:54&#34; INC 40K
+</span></span></code></pre></div><ol start="2">
+<li>Eliminarea backup-ului (vor fi eliminate backup-urile mai vechi de o luna )</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>su - zimbra -c &#39;/usr/local/bin/zmbkpose -d 1m -a user@example.md&#39;
+</span></span></code></pre></div><p>Rezultat:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>2017-08-30 10:49:50 DEBUG: user@example.md - START deleting old backups cycles prior to 30/08/2017 10:48:50 
+</span></span><span style="display:flex;"><span>2017-08-30 10:49:50 DEBUG: user@example.md - Deleting backup from 09/06/2017 17:09:19 FULL 
+</span></span><span style="display:flex;"><span>2017-08-30 10:49:50 DEBUG: user@example.md - Deleting backup from 12/06/2017 10:21:07 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 10:49:50 DEBUG: user@example.md - Deleting backup from 13/06/2017 09:09:33 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 10:49:50 DEBUG: user@example.md - Deleting backup from 03/08/2017 16:18:00 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 10:49:50 DEBUG: user@example.md - END deleting old backups
+</span></span></code></pre></div><ol start="3">
+<li>Restabilirea contului</li>
+</ol>
+<p>a.	Restabilirea ultimelor backup-uri  (Va fi restabilit ultimul ciclu FULL + INC(1)+INC(2)+&hellip;INC(n+1))</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>su - zimbra -c &#39;/usr/local/bin/zmbkpose -r -a user@example.md&#39;
+</span></span></code></pre></div><p>Rezultat:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>2017-08-30 10:55:01 DEBUG: Testing ldapserver ldap://172.28.92.3:389, using user uid=zimbra,cn=admins,cn=zimbra 
+</span></span><span style="display:flex;"><span>2017-08-30 10:55:01 DEBUG: user@example.md - Using ldap data from backup /opt/zimbra/backup/example.md/user/20170829165054:INC.tar 
+</span></span><span style="display:flex;"><span>2017-08-30 10:55:01 DEBUG: user@example.md - Ldap restore started 
+</span></span><span style="display:flex;"><span>2017-08-30 10:55:01 DEBUG: user@example.md - Mailbox restore started 
+</span></span><span style="display:flex;"><span>2017-08-30 10:55:01 DEBUG: user@example.md - Restauring from 29/08/2017 15:22:15 FULL 
+</span></span><span style="display:flex;"><span>2017-08-30 10:55:01 DEBUG: user@example.md - Restauring from 29/08/2017 16:50:54 INC 
+</span></span><span style="display:flex;"><span>2017-08-30	0:55:01 DEBUG: user@example.md - Restore end
+</span></span></code></pre></div><p>b.	Restabilirea conditionata (Vor fi restabilite mesajele din toate backu-urile)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>su - zimbra -c &#39;/usr/local/bin/zmbkpose -R - -a user@example.md&#39;
+</span></span></code></pre></div><p>Rezultat:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: Testing ldapserver ldap://172.28.92.3:389, using user uid=zimbra,cn=admins,cn=zimbra 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Using ldap data from backup /opt/zimbra/backup/example.md/user/20170829165054:INC.tar 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Ldap restore started 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Mailbox restore started 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Restauring from 09/06/2017 17:09:19 FULL 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Restauring from 12/06/2017 10:21:07 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Restauring from 13/06/2017 09:09:33 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Restauring from 03/08/2017 16:18:00 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Restauring from 29/08/2017 15:22:15 FULL 
+</span></span><span style="display:flex;"><span>2017-08-30 11:08:32 DEBUG: user@example.md - Restauring from 29/08/2017 16:50:54 INC 
+</span></span><span style="display:flex;"><span>2017-08-30	1:08:32 DEBUG: user@example.md - Restore end
+</span></span></code></pre></div><p>c.	Restabilirea conditionata  (Vor fi restabilite mesajele la data de 03/08/2017 16:18:00)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>su - zimbra -c &#39;/usr/local/bin/zmbkpose -R 20170803161800 -a user@example.md&#39;
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: Testing ldapserver ldap://172.28.92.3:389, using user uid=zimbra,cn=admins,cn=zimbra 
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: user@example.md - Using ldap data from backup /opt/zimbra/backup/example.md/user/20170803161800:INC.tar 
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: user@example.md - Ldap restore started 
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: user@example.md - Mailbox restore started 
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: user@example.md - Restauring from 09/06/2017 17:09:19 FULL 
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: user@example.md - Restauring from 12/06/2017 10:21:07 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: user@example.md - Restauring from 13/06/2017 09:09:33 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: user@example.md - Restauring from 03/08/2017 16:18:00 INC 
+</span></span><span style="display:flex;"><span>2017-08-30 11:39:50 DEBUG: user@example.md - Restore end
+</span></span></code></pre></div><p>###Instalare:</p>
+<ol>
+<li>Se download-eaza scriptul de pe: h<a href="ttp://github.com/bggo/Zmbkpose/archive/rewrite_proposal_v2.0.zip">ttp://github.com/bggo/Zmbkpose/archive/rewrite_proposal_v2.0.zip</a></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>#cd /opt/kit/
+</span></span><span style="display:flex;"><span>#wget http://github.com/bggo/Zmbkpose/archive/rewrite_proposal_v2.0.zip
+</span></span></code></pre></div><ol start="2">
+<li>Se de arhiveaza arhiva</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>#unzip rewrite_proposal_v2.0.zip
+</span></span></code></pre></div><ol start="3">
+<li>Se trece in directorul de arhivat</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>#cd Zmbkpose-rewrite_proposal_v2.0/
+</span></span></code></pre></div><ol start="4">
+<li>Se instaleaza</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>#./install.sh
+</span></span></code></pre></div><p>Rezultatul executiei :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Checking zimbra installation            ...[OK]
+</span></span><span style="display:flex;"><span>  -zmbkpose will use &#34;zimbra&#34; user for execution.
+</span></span><span style="display:flex;"><span>Checking installer integrity            ...[OK]
+</span></span><span style="display:flex;"><span>Checking system for dependencies...     ...
+</span></span><span style="display:flex;"><span>  -Dependencies will be executed by &#34;zimbra&#34; user
+</span></span><span style="display:flex;"><span>  awk                                  ...[OK]
+</span></span><span style="display:flex;"><span>  curl                                 ...[OK]
+</span></span><span style="display:flex;"><span>  date                                 ...[OK]
+</span></span><span style="display:flex;"><span>  du                                   ...[OK]
+</span></span><span style="display:flex;"><span>  egrep                                ...[OK]
+</span></span><span style="display:flex;"><span>  find                                 ...[OK]
+</span></span><span style="display:flex;"><span>  grep                                 ...[OK]
+</span></span><span style="display:flex;"><span>  ldapadd                              ...[OK]
+</span></span><span style="display:flex;"><span>  ldapdelete                           ...[OK]
+</span></span><span style="display:flex;"><span>  ldapsearch                           ...[OK]
+</span></span><span style="display:flex;"><span>  ln                                   ...[OK]
+</span></span><span style="display:flex;"><span>  printf                               ...[OK]
+</span></span><span style="display:flex;"><span>  rm                                   ...[OK]
+</span></span><span style="display:flex;"><span>  sed                                  ...[OK]
+</span></span><span style="display:flex;"><span>  sort                                 ...[OK]
+</span></span><span style="display:flex;"><span>  tar                                  ...[OK]
+</span></span><span style="display:flex;"><span>  uniq                                 ...[OK]
+</span></span><span style="display:flex;"><span>  readlink                             ...[OK]
+</span></span><span style="display:flex;"><span>Installing                              ...[OK]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>################################################################################
+</span></span><span style="display:flex;"><span> I configured /etc/zmbkpose/zmbkpose.conf whith :
+</span></span><span style="display:flex;"><span>    WORKDIR=&#34;/opt/zimbra/backup&#34;
+</span></span><span style="display:flex;"><span> Change it if you decide to place the backup files elsewhere.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>################################################################################
+</span></span><span style="display:flex;"><span> If you want, I can try configure /etc/zmbkpose/zmbkpose.conf
+</span></span><span style="display:flex;"><span>  with the following settings automatically detected:
+</span></span><span style="display:flex;"><span>   * LDAPMASTERSERVER=ldap://192.168.0.1:389
+</span></span><span style="display:flex;"><span>   * LDAPZIMBRADN=uid=zimbra,cn=admins,cn=zimbra
+</span></span><span style="display:flex;"><span>   * LDAPZIMBRAPASS=WyZ3nfKd
+</span></span><span style="display:flex;"><span>Do you like this script make these settings? [y/n]: [YES]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>################################################################################
+</span></span><span style="display:flex;"><span> You will need to configure the follow values manually  
+</span></span><span style="display:flex;"><span>  in /etc/zmbkpose/zmbkpose.conf before to use zmbkpose:
+</span></span><span style="display:flex;"><span>    * ADMINUSER
+</span></span><span style="display:flex;"><span>    * ADMINPASS
+</span></span><span style="display:flex;"><span>The following users were found as administrators, and can be configured as ADMINUSER:
+</span></span><span style="display:flex;"><span>  * admin@example.md
+</span></span><span style="display:flex;"><span>################################################################################
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Note: --------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span> Remember execute zmbkpose using user &#34;zimbra&#34;, dependent commands 
+</span></span><span style="display:flex;"><span>  were checked using this user. 
+</span></span><span style="display:flex;"><span>--------------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>Install completed. Do you want to display the README file? [y/n]: [NO]
+</span></span></code></pre></div><h3 id="configurare">Configurare:</h3>
+<ol>
+<li>In  /etc/zmbkpose/zmbkpose.conf  se afla configurarile:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>WORKDIR=&#34;/opt/zimbra/backup&#34;  -  directorul unde se va face backup  (este creat automat la instalare)
+</span></span><span style="display:flex;"><span>ADMINUSER=zmbkpose@example.md.md  - cont de administrator
+</span></span><span style="display:flex;"><span>ADMINPASS=password  - parola contului de administrator
+</span></span><span style="display:flex;"><span>LDAPMASTERSERVER=ldap://192.168.0.1:389 - URL-ul serviciului Open LDAP (este setat automat la instalare)
+</span></span><span style="display:flex;"><span>LDAPZIMBRADN=&#34;uid=zimbra,cn=admins,cn=zimbra&#34;  - schema LDAP dupa care sunt extrase datele  (este setat automat la instalare)
+</span></span><span style="display:flex;"><span>LDAPZIMBRAPASS=&#34;Wy**nfKd&#34;  - parola de access la Open Ldap  (este setat automat la instalare)
+</span></span><span style="display:flex;"><span>PARALLEL_SUPPORT=0	-  suport pentru backup paralel
+</span></span><span style="display:flex;"><span>MAX_PARALLEL_PROCESS=3 -  numarul de procese paralele
+</span></span></code></pre></div><p>In caz ca nu vrem sa indicam username-ul si parola de administrator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># su zimbra
+</span></span><span style="display:flex;"><span># zmprov ca zmbkpose@example.md &#34;password&#34;
+</span></span><span style="display:flex;"><span># zmprov ma zmbkpose@example.md zimbraIsAdminAccount TRUE
+</span></span></code></pre></div><ol start="2">
+<li>Scriptul executabil se afla  in /usr/local/bin/zmbkpose</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Aditional este propus un script care ofera posibilitatea de a automatiza unele procese. Scriptul de afla in directorul  unde a fost dezarhivata arhiva cu instalatia example/usr/local/bin/zmbkpose.wrapper
+</span></span><span style="display:flex;"><span>Acest script este copiat in /usr/local/bin/zmbkpose
+</span></span><span style="display:flex;"><span>#cd  /opt/kit/Zmbkpose-rewrite_proposal_v2.0/
+</span></span><span style="display:flex;"><span>#cp example/usr/local/bin/zmbkpose.wrapper /usr/local/bin/
+</span></span><span style="display:flex;"><span># chown zimbra:root /usr/local/bin/zmbkpose.wrapper 
+</span></span><span style="display:flex;"><span>#chmod 700 /usr/local/bin/zmbkpose.wrapper
+</span></span></code></pre></div><ol start="3">
+<li>Se instaleaza crontab-ul:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># crontab -e   
+</span></span></code></pre></div><p>Se adauga urmatoarele:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>##FULL BACKUPS every day for 400 accounts(-c 400), or for 6 hours(-C 6h)
+</span></span><span style="display:flex;"><span>#  whichever comes first, only if last full backup has more than 20 days
+</span></span><span style="display:flex;"><span>#  old(-F 20d).
+</span></span><span style="display:flex;"><span># Pause of 5 seconds between accounts backups( -e 5s)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>0 0 * * * su - zimbra -c &#39;LOG_TYPE=full_bk /usr/local/bin/zmbkpose.wrapper -F 20d -C 6h -c 400 -e 5s&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>##INCREMENTAL BACKUPS every day for 3 hours(-C 3h), only if last incremental backup 
+</span></span><span style="display:flex;"><span># has more than 30hs old(-I 30h). 
+</span></span><span style="display:flex;"><span># Perform a full backup is not has previous incremental (-t)
+</span></span><span style="display:flex;"><span># Pause of 5 seconds betwee accounts backups (-e 5s)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>0 6  * * * su - zimbra -c &#39;LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s&#39;
+</span></span><span style="display:flex;"><span>0 9  * * * su - zimbra -c &#39;LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s&#39;
+</span></span><span style="display:flex;"><span>0 18 * * * su - zimbra -c &#39;LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s&#39;
+</span></span><span style="display:flex;"><span>0 21 * * * su - zimbra -c &#39;LOG_TYPE=inc_bk /usr/local/bin/zmbkpose.wrapper -I 30h -C 3h -t -e 5s&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#Remove old backups
+</span></span><span style="display:flex;"><span>#Delete cycles off backups older than 15 days(-d 15d). A cycle is a full backups
+</span></span><span style="display:flex;"><span>#  and its subsequent incremental backups. 
+</span></span><span style="display:flex;"><span># zmbkpose will not eliminate backups leaving incomplete cycles
+</span></span><span style="display:flex;"><span>0 2 * * *  su - zimbra -c &#39;LOG_TYPE=del_bk /usr/local/bin/zmbkpose.wrapper -d 15d&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#Remove old logs files
+</span></span><span style="display:flex;"><span>0 22 * * * su - zimbra -c &#39;find /var/log/zmbkpose -type f -mtime +30 -exec rm -f &#39;{}&#39; \;&#39;
+</span></span></code></pre></div></div>
+</article>
+
+
+    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="openFediInstanceDialog();">
+        Share on the Fediverse
+    </a>
+    <div id="fediInstanceDialog">
+        <div class="bg" onclick="closeFediInstanceDialog();"></div>
+        <div class="dialog">
+            <h2>Enter your instance&#39;s address</h2>
+            <input id="fediInstanceInput" placeholder='Eg. mastodon.social' type="text" />
+            <div class="buttons">
+                <a class="shareBtn" onclick="closeFediInstanceDialog();">Cancel</a>
+                <a class="shareBtn" onclick="shareOnFedi();">Share</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var articleTitle = '';
+        var articleLink = 'http:\/\/fleek.eu.org:1313\/posts\/2018-06-22-zimbra-backup-rezervarea-cutiilor-postale-in-zimbra-foss\/';
+        var fediInstanceDialog = document.getElementById('fediInstanceDialog');
+        var fediInstanceInput = document.getElementById('fediInstanceInput');
+        function openFediInstanceDialog() {
+            fediInstanceDialog.classList.add('open');
+        }
+        function closeFediInstanceDialog() {
+            fediInstanceDialog.classList.remove('open');
+        }
+        function fixURL(url) {
+            if (url.substr(0, 8) == 'https://') return url;
+            if (url.substr(0, 7) == 'http://') return url;
+            return 'https://' + url;
+        }
+        function shareOnFedi() {
+            let instance = fediInstanceInput.value.trim();
+            if (!instance) {
+                return;
+            }
+            instance = fixURL(instance);
+            window.open(
+                `${instance}/share?text=${articleTitle}%20${articleLink}`,
+                '__blank'
+            );
+            closeFediInstanceDialog();
+        }
+    </script>
+
+
+
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+
+<div id="ficurinia-cactus-comments"></div>
+
+<script>
+initComments({
+    node: document.getElementById("ficurinia-cactus-comments"),
+    defaultHomeserverUrl: 'https:\/\/matrix.cactus.chat:8448',
+    serverName: 'cactus.chat',
+    siteName: "gabmus.org",
+    commentSectionId: "07ba783c9233d258b6ffac3a14102267"
+})
+</script>
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2022 &copy; Gabriele Musco - <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

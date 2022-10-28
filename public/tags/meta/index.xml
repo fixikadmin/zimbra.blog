@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>meta on SoBo&#39;s Dev Log</title>
+    <link>http://blog.zimbra.md/tags/meta/</link>
+    <description>Recent content in meta on SoBo&#39;s Dev Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>JekA SoBo - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).</copyright>
+    <lastBuildDate>Wed, 16 Jun 2021 10:24:30 +0200</lastBuildDate><atom:link href="http://blog.zimbra.md/tags/meta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Switching to Cactus Comments</title>
+      <link>http://blog.zimbra.md/posts/switching_to_cactus_comments/</link>
+      <pubDate>Wed, 16 Jun 2021 10:24:30 +0200</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/switching_to_cactus_comments/</guid>
+      <description>I&amp;rsquo;ve been using Commento for a while for comments (without much adoption to be honest), and while I really love the project, and the simplicity of its approach, there&amp;rsquo;s always been one unavoidable thing I never really liked too much: if you want to comment, you have to register to my commento instance.</description>
+    </item>
+    
+    <item>
+      <title>On privacy conscious comments and analytics</title>
+      <link>http://blog.zimbra.md/posts/on_comments_and_analytics/</link>
+      <pubDate>Wed, 14 Aug 2019 19:40:00 +0000</pubDate>
+      
+      <guid>http://blog.zimbra.md/posts/on_comments_and_analytics/</guid>
+      <description>This blog is fairly new, and so I still have to set up everything. Comments are obviously a very important part of a blog, especially if you want any kind of feedback on the stuff you&amp;rsquo;re doing.</description>
+    </item>
+    
+  </channel>
+</rss>
