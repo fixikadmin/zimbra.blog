@@ -16,3 +16,5 @@ fields:
   config:
     required: false
   label: Zimbra
+pages:
+- content/posts/securitatea-in-zimbra-ose.md
